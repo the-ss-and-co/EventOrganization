@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="80dp"
+        android:layout_height="85dp"
+        android:src="@drawable/ficon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/img"
+        android:layout_marginTop="15dp"
+        android:layout_centerInParent="true">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:id="@+id/edt_name_main"
+            android:layout_marginLeft="15dp">
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions"
+                android:hint="Name"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:id="@+id/edt_phone_main"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/edt_phone"
+                android:maxLines="1"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mobile Number"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="95dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="#D8F00202"
+            android:text="next"
+            android:textSize="17dp"
+            android:textColor="#fff"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
