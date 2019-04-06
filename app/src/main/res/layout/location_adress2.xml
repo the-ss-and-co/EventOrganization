@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:id="@+id/extralayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:id="@+id/backarrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:contentDescription="@string/arrowback" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/extra_details"
+            android:layout_toEndOf="@+id/backarrow"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:layout_marginStart="5dp"
+            tools:ignore="RelativeOverlap" />
+        <Button
+            android:id="@+id/skip"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:text="@string/skip"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/extralayout"
+        android:background="@drawable/gradient_layout">
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/shadow"
+        >
+        <TextView
+            android:id="@+id/locationtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your location text is here"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            />
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/Eventhouse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/locationtext"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="90dp">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/hoseno"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/event_house_name_no"
+                />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/landmark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Eventhouse"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/land"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/landmark"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/landmark"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/buttonsave"
+            android:text="@string/save"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
