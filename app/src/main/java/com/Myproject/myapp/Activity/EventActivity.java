@@ -3,6 +3,8 @@ package com.Myproject.myapp.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.Myproject.myapp.R;
+
 public class EventActivity extends AppCompatActivity {
 
     @Override
