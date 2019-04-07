@@ -5,20 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.Location">
-    <TextView
-        android:id="@+id/settt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Set Service Location"
-        android:layout_margin="20dp"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textColor="#F0F70202"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <EditText
+
+    <FrameLayout
+        android:id="@+id/location_contaner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent">
+
+    </FrameLayout>
 
 </RelativeLayout>
