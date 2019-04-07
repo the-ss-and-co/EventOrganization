@@ -11,4 +11,13 @@
     <string name="save">Save</string>
     <string name="extra_details">Extra Details</string>
     <string name="skip">Skip</string>
+    <string name="choose_a_service">Choose a service</string>
+    <string name="service_type_1">Service Type 1</string>
+    <string name="service_type_3">Service Type 3</string>
+    <string name="service_type_2">Service Type 2</string>
+    <string name="service">service</string>
+    <string name="choose_an_event">Choose an Event</string>
+    <string name="go">GO</string>
+    <string name="event">EVENT</string>
+    <string name="event_type">Event Type</string>
 </resources>
