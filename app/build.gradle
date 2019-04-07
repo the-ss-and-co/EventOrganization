@@ -32,7 +32,12 @@ dependencies {
 
     //volly
     implementation 'com.android.volley:volley:1.1.0'
+//map
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    implementation 'com.google.android.gms:play-services-places:16.0.0'
 
+    //google location
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
 
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
