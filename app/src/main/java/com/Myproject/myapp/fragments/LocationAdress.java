@@ -17,7 +17,7 @@ public class LocationAdress extends Fragment {
     ImageView backarrow;
     TextInputEditText Eventhouse,Areaname,City,Town,State,Pin,Landmark;
     Button save;
-
+String city,state,pin;
 
     @Nullable
     @Override
@@ -33,5 +33,20 @@ public class LocationAdress extends Fragment {
         Landmark = view.findViewById(R.id.landmark);
         save = view.findViewById(R.id.save);
         return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        savedInstanceState=getArguments();
+        if(savedInstanceState!=null){
+
+city=savedInstanceState.getString("city");
+state=savedInstanceState.getString("state");
+pin=savedInstanceState.getString("postalCode");
+City.setText(city);
+State.setText(state);
+Pin.setText(pin);
+        }
     }
 }

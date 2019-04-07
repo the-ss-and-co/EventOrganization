@@ -19,7 +19,7 @@ public class LocationAdress2 extends Fragment {
     TextView Locationtext;
     ImageView Backarrow;
     Button Skip,save;
-
+String address;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -31,5 +31,15 @@ public class LocationAdress2 extends Fragment {
         Skip = view.findViewById(R.id.skip);
         save = view.findViewById(R.id.save);
         return  view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        savedInstanceState=getArguments();
+        if(savedInstanceState!=null){
+            address=savedInstanceState.getString("address");
+            Locationtext.setText(address);
+        }
     }
 }
