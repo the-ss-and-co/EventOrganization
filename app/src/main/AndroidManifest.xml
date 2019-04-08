@@ -18,19 +18,19 @@
 
         <activity android:name=".Activity.EventActivity"></activity>
         <activity android:name=".Activity.ServiceActivity" />
-        <activity android:name=".Activity.Location" />
         <activity android:name=".Activity.LoginActivity">
-        <activity android:name=".Activity.Location">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".Activity.LoginActivity">
 
         </activity>
+        <activity android:name=".Activity.Location">
+
+        </activity>
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

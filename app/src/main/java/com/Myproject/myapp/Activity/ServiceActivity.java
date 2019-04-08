@@ -3,6 +3,7 @@ package com.Myproject.myapp.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -11,7 +12,7 @@ import com.Myproject.myapp.R;
 
 public class ServiceActivity extends AppCompatActivity implements View.OnClickListener {
 RelativeLayout Services;
-LinearLayout service1,service2,Service3;
+CardView service1,service2,Service3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
