@@ -10,14 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Activity.EventActivity"></activity>
-        <activity android:name=".Activity.ServiceActivity" />
-        <activity android:name=".Activity.Location" />
-        <activity android:name=".Activity.LoginActivity">
+        <activity android:name=".Activity.ServiceActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Activity.Location" />
+        <activity android:name=".Activity.LoginActivity">
+
         </activity>
     </application>
 
