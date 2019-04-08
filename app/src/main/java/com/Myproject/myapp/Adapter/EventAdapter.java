@@ -4,6 +4,7 @@ import android.content.Context;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,7 +56,7 @@ myviewHolder.rel.setOnClickListener(new View.OnClickListener() {
     public class MyviewHolder extends RecyclerView.ViewHolder {
         TextView textView;
         ImageView imageView;
-        RelativeLayout rel;
+        CardView rel;
         public MyviewHolder(@NonNull View itemView) {
             super(itemView);
             textView = itemView.findViewById(R.id.eventtext);
