@@ -14,6 +14,8 @@ import com.Myproject.myapp.R;
 
 import java.util.ArrayList;
 
+import com.Myproject.myapp.R;
+
 public class EventActivity extends AppCompatActivity {
 
     RecyclerView EventView;
@@ -35,19 +37,15 @@ public class EventActivity extends AppCompatActivity {
         arrayList.add(new EventModel("Event 1",R.drawable.ic_event_black_24dp));
         arrayList.add(new EventModel("Event 2",R.drawable.ic_event_black_24dp));
         arrayList.add(new EventModel("Event 3",R.drawable.ic_event_black_24dp));
-
         eventView();
-
-
 
 
     }
 
     private void eventView() {
         EventView.setItemAnimator(new DefaultItemAnimator());
-        EventView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,true));
+        EventView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         eventAdapter = new EventAdapter(this,arrayList);
         EventView.setAdapter(eventAdapter);
-
     }
 }

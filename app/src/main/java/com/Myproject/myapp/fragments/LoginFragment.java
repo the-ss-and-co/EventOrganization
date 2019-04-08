@@ -1,5 +1,6 @@
 package com.Myproject.myapp.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.Myproject.myapp.Activity.ServiceActivity;
 import com.Myproject.myapp.R;
 
 public class LoginFragment extends Fragment {
@@ -40,9 +42,11 @@ public class LoginFragment extends Fragment {
     }
 
     private void replaceFrgment() {
-        FragmentManager fm=getFragmentManager();
-        FragmentTransaction ft=fm.beginTransaction();
-        ft.replace(R.id.login_continer,new OtpFragment()).commit();
+//        FragmentManager fm=getFragmentManager();
+//        FragmentTransaction ft=fm.beginTransaction();
+//        ft.replace(R.id.login_continer,new OtpFragment()).commit();
+        startActivity(new Intent(getContext(), ServiceActivity.class));
+        getActivity().finish();
     }
 
     private void initviews(View view) {
