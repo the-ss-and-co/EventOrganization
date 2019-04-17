@@ -4,28 +4,30 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/rel"
-    android:layout_margin="8dp"
+    android:layout_margin="9dp"
     >
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="55dp">
     <TextView
         android:id="@+id/eventtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/event_type"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="21sp"
+        android:fontFamily="@font/quicksand"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/eventicon"
         android:layout_centerVertical="true"
-        android:layout_marginStart="15dp"/>
+     />
     <ImageView
         android:id="@+id/eventicon"
-        android:layout_width="wrap_content"
+        android:layout_width="28dp"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_event_black_24dp"
         android:layout_centerVertical="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="10dp"/>
+        android:layout_marginLeft="15dp"/>
         </RelativeLayout>
 </android.support.v7.widget.CardView>

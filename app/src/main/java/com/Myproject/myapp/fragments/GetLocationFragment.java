@@ -162,7 +162,7 @@ generateAddress(latLng);
                 getmycurrentlocation();
                 break;
             case R.id.btn_save:
-                if(getlocation.getText().length()>11){
+                if(!autoCompleteTextView.getText().toString().isEmpty()){
                     replace(new LocationAdress());
                 }else {
                 replace(new LocationAdress2());
@@ -204,16 +204,22 @@ generateAddress(latLng);
     }
 
     private void replace(Fragment fg){
-        FragmentManager fm =getFragmentManager();
-        FragmentTransaction ft=fm.beginTransaction();
+
 Bundle bundle=new Bundle();
 bundle.putString("city",city);
 bundle.putString("state",state);
 bundle.putString("postalCode",postalCode);
 bundle.putString("address",address);
 fg.setArguments(bundle);
-ft.replace(R.id.location_contaner,fg).commit();
-
+        String backStateName = fg.getClass().getName();
+        boolean fragmentPopped = getFragmentManager().popBackStackImmediate(backStateName,0);
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        if (!fragmentPopped) {
+            ft.replace(R.id.location_contaner, fg);
+            ft.addToBackStack(backStateName);
+            ft.commit();
+        }
     }
 
     private void generateAddress(LatLng latLng) {
