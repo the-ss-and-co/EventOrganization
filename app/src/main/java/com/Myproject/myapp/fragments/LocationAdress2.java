@@ -41,5 +41,34 @@ String address;
             address=savedInstanceState.getString("address");
             Locationtext.setText(address);
         }
+<<<<<<< Updated upstream
+=======
+        Backarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                replace(new GetLocationFragment());
+            }
+        });
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                replace(new DestinationAdress());
+            }
+        });
+    }
+
+    private void replace(Fragment fragment) {
+        String backStateName = fragment.getClass().getName();
+        boolean fragmentPopped = getFragmentManager().popBackStackImmediate(backStateName,0);
+
+        if (!fragmentPopped) {
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.location_contaner,fragment);
+            ft.addToBackStack(backStateName);
+            ft.commit();
+
+        }
+>>>>>>> Stashed changes
     }
 }

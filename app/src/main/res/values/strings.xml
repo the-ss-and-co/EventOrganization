@@ -20,4 +20,12 @@
     <string name="go">GO</string>
     <string name="event">EVENT</string>
     <string name="event_type">Event Type</string>
+    <string name="service_4">Service 4</string>
+    <string name="destination_address">Destination Address</string>
+    <string name="your_preffered_budget">Your Preffered Budget</string>
+    <string name="kolkata_westbengal_delhi_fara">kolkata,westbengal,delhi,fara</string>
+    <string name="min_price">Min Price</string>
+    <string name="max_price">Max Price</string>
+    <string name="or">OR</string>
+    <string name="enter_amount_manually">Enter Amount Manually...</string>
 </resources>
