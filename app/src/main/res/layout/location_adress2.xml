@@ -8,35 +8,41 @@
     <RelativeLayout
         android:id="@+id/extralayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="50dp"
         >
-        <ImageView
-            android:id="@+id/backarrow"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_arrow_back_black_24dp"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="20dp"
-            android:contentDescription="@string/arrowback" />
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/extra_details"
-            android:layout_toEndOf="@+id/backarrow"
-            android:textSize="25sp"
-            android:textColor="#000000"
-            android:layout_marginStart="5dp"
-            tools:ignore="RelativeOverlap" />
+            android:layout_centerVertical="true">
+            <ImageView
+                android:id="@+id/backarrow"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:contentDescription="@string/arrowback" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/extra_details"
+                android:layout_toEndOf="@+id/backarrow"
+                android:textSize="22sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                tools:ignore="RelativeOverlap" />
+        </LinearLayout>
+
         <Button
             android:id="@+id/skip"
-<<<<<<< Updated upstream
+
             android:layout_width="70dp"
             android:layout_height="40dp"
             android:layout_alignParentEnd="true"
             android:text="@string/skip"
             />
-=======
+
             android:layout_width="60dp"
             android:layout_height="45dp"
             android:layout_centerVertical="true"
@@ -45,7 +51,16 @@
             android:layout_margin="8dp"
             android:background="@drawable/skip"
             android:text="@string/skip" />
->>>>>>> Stashed changes
+
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+       android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="5dp"
+            android:layout_margin="8dp"
+android:background="@drawable/skip"
+            android:text="@string/skip" />
+
     </RelativeLayout>
     <RelativeLayout
         android:id="@+id/shadow"
@@ -67,9 +82,9 @@
             android:layout_height="wrap_content"
             android:text="Your location text is here"
             android:textColor="#000"
-            android:textSize="25sp"
+            android:textSize="17sp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             />
         <android.support.design.widget.TextInputLayout
             android:id="@+id/Eventhouse"
@@ -78,7 +93,9 @@
             android:layout_below="@+id/locationtext"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginTop="90dp">
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20px"
+            >
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/hoseno"
                 android:layout_width="match_parent"
@@ -92,7 +109,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/Eventhouse"
             android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp">
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="20dp">
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/land"
                 android:layout_width="match_parent"
@@ -103,14 +121,14 @@
 
         <Button
             android:id="@+id/save"
-            android:layout_width="120dp"
+            android:layout_width="110dp"
             android:layout_height="50dp"
             android:layout_below="@+id/landmark"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/buttonsave"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20px"
+            android:background="@drawable/rcr"
             android:text="@string/save"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textColor="#ffffff"
             android:textStyle="bold"
             />

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -28,16 +29,18 @@
                 android:id="@+id/eventhouse"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:fontFamily="@font/quicksand"
                 android:hint="@string/event_house_name_no"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="3dp"
             android:layout_gravity="center_horizontal">
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/areaname"
+                android:fontFamily="@font/quicksand"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="@string/area_name"/>
@@ -48,15 +51,18 @@
             android:layout_gravity="center_horizontal"
             android:orientation="horizontal"
             android:weightSum="2"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="7dp"
 
             >
             <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:layout_marginRight="5dp">
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/city"
+                    android:paddingTop="3dp"
+                    android:fontFamily="@font/quicksand"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/city"/>
@@ -64,9 +70,13 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:layout_marginLeft="2dp">
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/town"
+                    android:paddingTop="3dp"
+
+                    android:fontFamily="@font/quicksand"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/town"/>
@@ -85,9 +95,13 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:layout_marginRight="5dp">
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/state"
+                    android:paddingTop="3dp"
+
+                    android:fontFamily="@font/quicksand"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/state"/>
@@ -95,9 +109,13 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:layout_marginLeft="2dp">
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/pin"
+                    android:paddingTop="3dp"
+
+                    android:fontFamily="@font/quicksand"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/pin"/>
@@ -107,9 +125,12 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="7dp">
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/landmark"
+                android:paddingTop="3dp"
+
+                android:fontFamily="@font/quicksand"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="@string/landmark"/>
@@ -121,8 +142,8 @@
             android:layout_height="50dp"
             android:text="@string/save"
             android:textColor="#ffffff"
-            android:textStyle="bold"
             android:textSize="20sp"
+android:fontFamily="@font/quicksand_bold"
             android:background="@drawable/buttonsave"
             android:layout_marginTop="30dp"/>
 
