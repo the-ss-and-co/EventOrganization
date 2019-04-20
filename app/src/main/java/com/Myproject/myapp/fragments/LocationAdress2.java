@@ -44,12 +44,21 @@ String address;
             address=savedInstanceState.getString("address");
             Locationtext.setText(address);
         }
+<
         Backarrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 replace(new GetLocationFragment());
             }
         });
+
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                replace(new DestinationAdress());
+            }
+        });
+
     }
 
     private void replace(Fragment fragment) {
@@ -64,5 +73,6 @@ String address;
             ft.commit();
 
         }
+
     }
 }
