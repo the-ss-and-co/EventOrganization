@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="300dp"
+    android:layout_height="145dp"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event House"
+        android:textSize="20dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:textColor="#000"
+        android:layout_margin="5dp"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Catering"
+            android:textSize="20dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Photographer"
+            android:textSize="20dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            />
+    </LinearLayout>
+</RelativeLayout>
