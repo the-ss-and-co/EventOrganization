@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,11 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".Activity.EventActivity"></activity>
-        <activity android:name=".Activity.ServiceActivity" />
-        <activity android:name=".Activity.LoginActivity">
-
+        <activity android:name=".Activity.VenderListingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,9 +24,12 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".Activity.Location">
+        <activity android:name=".Activity.EventActivity" />
+        <activity android:name=".Activity.ServiceActivity" />
+        <activity android:name=".Activity.LoginActivity">
 
         </activity>
+        <activity android:name=".Activity.Location"></activity>
 
         <meta-data
             android:name="com.google.android.gms.version"

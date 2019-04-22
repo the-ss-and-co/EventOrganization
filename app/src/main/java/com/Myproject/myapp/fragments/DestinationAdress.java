@@ -1,5 +1,6 @@
 package com.Myproject.myapp.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,6 +16,7 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.Myproject.myapp.Activity.VenderListingActivity;
 import com.Myproject.myapp.R;
 
 public class DestinationAdress extends Fragment {
@@ -45,8 +47,16 @@ public class DestinationAdress extends Fragment {
         explore = view.findViewById(R.id.explore);
         min_amount.setText("0");
         seekbar();
+        explore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), VenderListingActivity.class));
+            }
+        });
         return view;
     }
+
+
 
     private void seekbar() {
         seekBar.setMax(70000);

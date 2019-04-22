@@ -59,7 +59,7 @@ backarrow.setOnClickListener(new View.OnClickListener() {
 save.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-
+replace(new DestinationAdress());
     }
 });
         }

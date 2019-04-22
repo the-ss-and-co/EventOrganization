@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_near"
+        android:icon="@drawable/group"
+        android:title="NEAR ME"/>
+
+    <item
+        android:id="@+id/navigation_explore"
+        android:icon="@drawable/search"
+        android:title="EXPLORE"/>
+
+    <item
+        android:id="@+id/navigation_wish"
+        android:icon="@drawable/heart"
+        android:title="WISHLIST"/>
+
+    <item
+        android:id="@+id/navigation_booking"
+        android:icon="@drawable/book"
+        android:title="BOOKING"/>
+
+    <item
+        android:id="@+id/navigation_acc"
+        android:icon="@drawable/user24"
+        android:title="ACCOUNT"/>
+</menu>
