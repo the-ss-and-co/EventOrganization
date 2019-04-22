@@ -36,7 +36,7 @@ Context context;
 viewHolder.name.setText(arrayList.get(i).getName());
 viewHolder.address.setText(arrayList.get(i).getAddress());
 viewHolder.count.setText(arrayList.get(i).getCount()+" people looking for");
-viewHolder.imageView.setImageResource(R.drawable.img4);
+viewHolder.imageView.setBackgroundResource(R.drawable.img4);
     }
 
     @Override
