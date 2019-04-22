@@ -10,15 +10,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.Myproject.myapp.Adapter.BeachAdapter;
 import com.Myproject.myapp.Adapter.NewAddedAdapter;
+import com.Myproject.myapp.Model.Modelbeachitem;
 import com.Myproject.myapp.Model.NewAddedlistModel;
 import com.Myproject.myapp.R;
 
 import java.util.ArrayList;
 
 public class VenderLisingFragment extends Fragment {
-RecyclerView recycler_new_add;
+RecyclerView recycler_new_add,beach_item;
 ArrayList<NewAddedlistModel>arrayList;
+    ArrayList<Modelbeachitem>arrayList2;
 
     @Nullable
     @Override
@@ -34,12 +37,27 @@ ArrayList<NewAddedlistModel>arrayList;
 
     private void initview(View view){
         recycler_new_add =view.findViewById(R.id.recycler_new_add);
+        beach_item = view.findViewById(R.id.beachimg_item);
         arrayList=new ArrayList<>();
-    alldata(arrayList);
+        alldata(arrayList);
+        arrayList2 =new ArrayList<>();
+        alldatabeach(arrayList2);
 
         NewAddedAdapter adapter=new NewAddedAdapter(arrayList,getContext());
         recycler_new_add.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
-recycler_new_add.setAdapter(adapter);
+        recycler_new_add.setAdapter(adapter);
+        BeachAdapter beachAdapter=new BeachAdapter(arrayList2,getContext());
+        beach_item.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+        beach_item.setAdapter(beachAdapter);
+    }
+
+    private void alldatabeach(ArrayList<Modelbeachitem> arrayList2) {
+        Modelbeachitem modelbeachitem = new Modelbeachitem();
+        modelbeachitem.setWishlist_no("1123 people wishtedlisted");
+        modelbeachitem.setTitle_name("Panama Beach Coral Avenue");
+        modelbeachitem.setAmount("$49");
+        modelbeachitem.setExtra_charge("Starting From");
+        arrayList2.add(modelbeachitem);
     }
 
     private void alldata(ArrayList<NewAddedlistModel> arrayList) {
