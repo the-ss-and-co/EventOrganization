@@ -33,4 +33,5 @@
     <string name="or">OR</string>
     <string name="enter_amount_manually">Enter Amount Manually...</string>
     <string name="others">Others</string>
+    <string name="star_rating">Star Rating</string>
 </resources>

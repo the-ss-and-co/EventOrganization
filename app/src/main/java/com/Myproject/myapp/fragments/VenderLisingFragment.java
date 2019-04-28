@@ -4,11 +4,14 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.Myproject.myapp.Adapter.BeachAdapter;
 import com.Myproject.myapp.Adapter.NewAddedAdapter;
@@ -20,6 +23,7 @@ import java.util.ArrayList;
 
 public class VenderLisingFragment extends Fragment {
 RecyclerView recycler_new_add,beach_item;
+ImageView filter;
 ArrayList<NewAddedlistModel>arrayList;
     ArrayList<Modelbeachitem>arrayList2;
 
@@ -38,10 +42,17 @@ ArrayList<NewAddedlistModel>arrayList;
     private void initview(View view){
         recycler_new_add =view.findViewById(R.id.recycler_new_add);
         beach_item = view.findViewById(R.id.beachimg_item);
+        filter=view.findViewById(R.id.filter);
         arrayList=new ArrayList<>();
         alldata(arrayList);
         arrayList2 =new ArrayList<>();
         alldatabeach(arrayList2);
+        filter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              replace(new PriceRating());
+            }
+        });
 
         NewAddedAdapter adapter=new NewAddedAdapter(arrayList,getContext());
         recycler_new_add.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
@@ -71,5 +82,18 @@ ArrayList<NewAddedlistModel>arrayList;
         model1.setAddress("Sukanta nagar,Sector 4,pin-700098");
         model1.setCount("20");
         arrayList.add(model1);
+    }
+    private void replace(Fragment fragment) {
+        String backStateName = fragment.getClass().getName();
+        boolean fragmentPopped = getFragmentManager().popBackStackImmediate(backStateName,0);
+
+        if (!fragmentPopped) {
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.listing_container, fragment);
+            ft.addToBackStack(backStateName);
+            ft.commit();
+
+        }
     }
 }
