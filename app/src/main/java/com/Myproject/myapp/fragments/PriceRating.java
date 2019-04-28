@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +39,7 @@ public class PriceRating extends Fragment {
         Close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+             replace(new VenderLisingFragment());
 
             }
         });
@@ -66,6 +68,20 @@ public class PriceRating extends Fragment {
             }
         });
 
+    }
+
+    private void replace(Fragment fragment) {
+        String backStateName = fragment.getClass().getName();
+        boolean fragmentPopped = getFragmentManager().popBackStackImmediate(backStateName,0);
+
+        if (!fragmentPopped) {
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.listing_container, fragment);
+            ft.addToBackStack(backStateName);
+            ft.commit();
+
+        }
     }
 
 }
