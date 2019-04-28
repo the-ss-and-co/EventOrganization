@@ -13,12 +13,12 @@
     <item
         android:id="@+id/navigation_wish"
         android:icon="@drawable/heart"
-        android:title="WISHLIST"/>
+        android:title="WISHLIST" />
 
     <item
         android:id="@+id/navigation_booking"
         android:icon="@drawable/book"
-        android:title="BOOKING"/>
+        android:title="BOOKING" />
 
     <item
         android:id="@+id/navigation_acc"

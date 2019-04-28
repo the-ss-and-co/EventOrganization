@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/btn_explore_package">
+
+        <RelativeLayout
+            android:id="@+id/rr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/r1"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <ImageView
+
+                    android:id="@+id/img_back"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="4dp"
+                    android:padding="8dp"
+                    android:src="@drawable/back" />
+
+                <TextView
+                    android:id="@+id/txt_service_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14dp"
+                    android:layout_toRightOf="@+id/img_back"
+                    android:fontFamily="@font/quicksand"
+                    android:text="Photographer"
+                    android:textColor="#000"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:id="@+id/img_call"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:padding="2dp"
+                    android:src="@drawable/call" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r2"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_below="@+id/r1">
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/aaaa" />
+
+                <ImageView
+                    android:id="@+id/wish"
+                    android:layout_width="30dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="15dp"
+                    android:backgroundTint="#fff"
+                    android:src="@drawable/wheateheart" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/l2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/r2"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/vender_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand"
+                    android:text="Festive Fame- Take a Stop in Your Moments"
+                    android:textColor="@color/black"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/vender_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/quicksand"
+                    android:text="Sukanta Nagar,Secter 4,Near ChingriGrata,pin-600098"
+                    android:textColor="@color/lightblank"
+                    android:textSize="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/l3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="Starting form"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/rupee" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/quicksand"
+                        android:text="30000"
+                        android:textColor="@color/red"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/rating_bar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:layout_marginTop="7dp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:progressTint="@color/red"
+                    android:rating="3"
+                    android:scaleX="1"
+                    android:scaleY="1" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/r3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/l2"
+                android:layout_marginTop="1dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+
+                    app:cardCornerRadius="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/squershape"
+                        android:scaleY="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="9dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="8dp"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="3dp"
+                                    android:src="@drawable/substract"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:id="@+id/txt_distance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="6dp"
+                                    android:fontFamily="@font/quicksand"
+                                    android:text="Destance Between  destinitation and  vender is above 30KM"
+
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp">
+
+                                <ImageView
+                                    android:layout_width="8dp"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="3dp"
+                                    android:src="@drawable/substract"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:id="@+id/txt_extra"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="6dp"
+                                    android:fontFamily="@font/quicksand"
+                                    android:text="Vender Charge extra on disdance above 30KM"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp">
+
+                                <ImageView
+                                    android:layout_width="8dp"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="3dp"
+                                    android:src="@drawable/substract" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="6dp"
+                                    android:fontFamily="@font/quicksand"
+                                    android:paddingBottom="7dp"
+                                    android:text="Here extra charge apply add will be added in your bill"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/r3">
+
+    <include layout="@layout/layout2"></include>
+</RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+    <Button
+        android:id="@+id/btn_explore_package"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/red"
+        android:text="Explore Packages"
+        android:textColor="@color/white"
+        android:textSize="19dp">
+
+    </Button>
+
+</RelativeLayout>
