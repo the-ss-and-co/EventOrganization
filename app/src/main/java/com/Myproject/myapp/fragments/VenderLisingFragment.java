@@ -1,5 +1,6 @@
 package com.Myproject.myapp.fragments;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.Myproject.myapp.Adapter.BeachAdapter;
 import com.Myproject.myapp.Adapter.NewAddedAdapter;
@@ -24,6 +26,7 @@ import java.util.ArrayList;
 public class VenderLisingFragment extends Fragment {
 RecyclerView recycler_new_add,beach_item;
 ImageView filter;
+RelativeLayout change_event;
 ArrayList<NewAddedlistModel>arrayList;
     ArrayList<Modelbeachitem>arrayList2;
 
@@ -43,6 +46,15 @@ ArrayList<NewAddedlistModel>arrayList;
         recycler_new_add =view.findViewById(R.id.recycler_new_add);
         beach_item = view.findViewById(R.id.beachimg_item);
         filter=view.findViewById(R.id.filter);
+        change_event=view.findViewById(R.id.rel_change_event);
+        change_event.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               final Dialog dialog = new Dialog(getContext());
+                dialog.setContentView(R.layout.dialog_box);
+                dialog.show();
+            }
+        });
         arrayList=new ArrayList<>();
         alldata(arrayList);
         arrayList2 =new ArrayList<>();
