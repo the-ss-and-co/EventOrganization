@@ -5,15 +5,22 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 
 import com.Myproject.myapp.Adapter.BeachAdapter;
 import com.Myproject.myapp.Adapter.NewAddedAdapter;
@@ -26,6 +33,9 @@ import java.util.ArrayList;
 public class VenderLisingFragment extends Fragment implements View.OnClickListener{
 RecyclerView recycler_new_add,beach_item;
 ImageView filter;
+
+RelativeLayout change_event;
+
 RelativeLayout rel_change_event;
 ArrayList<NewAddedlistModel>arrayList;
     ArrayList<Modelbeachitem>arrayList2;
@@ -52,10 +62,26 @@ TextView service_name;
         service_name=view.findViewById(R.id.service_name);
 
         beach_item = view.findViewById(R.id.beachimg_item);
+        filter=view.findViewById(R.id.filter);
+        change_event=view.findViewById(R.id.rel_change_event);
+        change_event.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               final Dialog dialog = new Dialog(getContext());
+                dialog.setContentView(R.layout.dialog_box);
+                dialog.show();
+            }
+        });
         arrayList=new ArrayList<>();
         alldata(arrayList);
         arrayList2 =new ArrayList<>();
         alldatabeach(arrayList2);
+        filter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              replace(new PriceRating());
+            }
+        });
 
         NewAddedAdapter adapter=new NewAddedAdapter(arrayList,getContext());
         recycler_new_add.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
@@ -92,6 +118,20 @@ filter.setOnClickListener(this);
         arrayList.add(model1);
     }
 
+    private void replace(Fragment fragment) {
+        String backStateName = fragment.getClass().getName();
+        boolean fragmentPopped = getFragmentManager().popBackStackImmediate(backStateName,0);
+
+        if (!fragmentPopped) {
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.listing_container, fragment);
+            ft.addToBackStack(backStateName);
+            ft.commit();
+
+        }
+
+
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -112,5 +152,5 @@ filter.setOnClickListener(this);
         Dialog dialog=new Dialog(getContext());
         dialog.setContentView(R.layout.filter);
         dialog.show();
-    }
+
 }
