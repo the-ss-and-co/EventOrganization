@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/_1123_people_wishtedlisted"
-        android:fontFamily="@font/quicksand_bold"
+        android:fontFamily="@font/quicksand"
         android:textColor="@color/red"
         android:layout_below="@+id/rel"
         android:layout_marginTop="10dp"
@@ -51,6 +51,7 @@
            android:layout_height="wrap_content"
            android:text="@string/panama_beach_coral_avenue"
            android:textSize="18sp"
+           android:layout_marginTop="4dp"
            android:fontFamily="@font/quicksand_bold"
            android:layout_below="@+id/wishlist_no"
            android:textColor="#000"
@@ -58,6 +59,7 @@
        <TextView
            android:id="@+id/extra_charge"
            android:layout_width="wrap_content"
+           android:layout_marginTop="5dp"
            android:layout_height="wrap_content"
            android:text="@string/extra_charges_apply_on_distance_above_28km"
            android:layout_below="@+id/title_name"
@@ -67,6 +69,7 @@
            android:id="@+id/amount"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
+           android:layout_marginTop="7dp"
            android:text="@string/starting_from"
            android:fontFamily="@font/quicksand_bold"
            android:layout_below="@+id/extra_charge"/>
@@ -79,6 +82,7 @@
            android:layout_below="@+id/extra_charge"
            android:layout_toRightOf="@+id/amount"
            android:layout_marginStart="5dp"
+           android:layout_marginTop="7dp"
            android:fontFamily="@font/quicksand_bold"
            />
 
@@ -88,6 +92,7 @@
                style="?android:attr/ratingBarStyleSmall"
                android:layout_below="@+id/price"
                android:rating="4"
+               android:layout_marginTop="4dp"
                android:progressTint="@color/red"
                />
    </RelativeLayout>

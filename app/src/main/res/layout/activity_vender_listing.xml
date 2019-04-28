@@ -5,18 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.VenderListingActivity">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:saveEnabled="true"
-        android:layout_above="@+id/bottom_nev">
+
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/listing_container">
+            android:id="@+id/listing_container"
+            android:layout_above="@+id/bottom_nev">
 
         </FrameLayout>
-    </ScrollView>
+
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_nev"

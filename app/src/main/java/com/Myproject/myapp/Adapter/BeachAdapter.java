@@ -34,9 +34,9 @@ public class BeachAdapter extends RecyclerView.Adapter<BeachAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull BeachAdapter.ViewHolder viewHolder, int i) {
         viewHolder.wishlist_no.setText(arrayList.get(i).getWishlist_no());
-        viewHolder.title_name.setText(arrayList.get(i).getTitle_name());
-        viewHolder.amount.setText(arrayList.get(i).getAmount());
-        viewHolder.extra_charge.setText(arrayList.get(i).getExtra_charge());
+       // viewHolder.title_name.setText(arrayList.get(i).getTitle_name());
+       // viewHolder.amount.setText(arrayList.get(i).getAmount());
+       // viewHolder.extra_charge.setText(arrayList.get(i).getExtra_charge());
 
     }
 
