@@ -89,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="25dp"
+                android:layout_marginLeft="19dp"
                 android:fontFamily="@font/quicksand_bold"
                 android:text="Marriage"
                 android:textColor="#000"
@@ -123,7 +123,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.7dp"
             android:background="#746E6E"
-            android:layout_margin="18dp">
+            android:layout_margin="16dp">
 
         </LinearLayout>
     </LinearLayout>
@@ -146,7 +146,7 @@
                 android:layout_width="220dp"
                 android:layout_height="22dp"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="25dp"
+                android:layout_marginLeft="19dp"
                 android:fontFamily="@font/quicksand"
                 android:text="sukanta naagagd d g adbadguya yagaduag"
                 android:textColor="#000"
@@ -180,7 +180,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.7dp"
             android:background="#746E6E"
-            android:layout_margin="18dp">
+            android:layout_margin="16dp">
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -189,8 +189,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_below="@+id/lin_add"
-        android:layout_marginLeft="22dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginLeft="9dp"
         >
         <TextView
             android:id="@+id/newADDED"
@@ -210,15 +209,17 @@
             android:id="@+id/recycler_new_add">
 
         </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
         <android.support.v7.widget.RecyclerView
             android:id="@+id/beachimg_item"
+            android:layout_below="@+id/lin3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_margin="9dp"
             >
 
         </android.support.v7.widget.RecyclerView>
-    </LinearLayout>
+
     </RelativeLayout>
 
 
