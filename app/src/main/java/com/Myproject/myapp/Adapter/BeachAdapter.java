@@ -1,14 +1,17 @@
 package com.Myproject.myapp.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.Myproject.myapp.Activity.VenderDetailsActivity;
 import com.Myproject.myapp.Model.Modelbeachitem;
 import com.Myproject.myapp.Model.NewAddedlistModel;
 import com.Myproject.myapp.R;
@@ -37,7 +40,12 @@ public class BeachAdapter extends RecyclerView.Adapter<BeachAdapter.ViewHolder> 
        // viewHolder.title_name.setText(arrayList.get(i).getTitle_name());
        // viewHolder.amount.setText(arrayList.get(i).getAmount());
        // viewHolder.extra_charge.setText(arrayList.get(i).getExtra_charge());
-
+viewHolder.r_main.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        context.startActivity(new Intent(context, VenderDetailsActivity.class));
+    }
+});
     }
 
     @Override
@@ -47,15 +55,16 @@ public class BeachAdapter extends RecyclerView.Adapter<BeachAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView wishlist_no,title_name,extra_charge,amount;
+        RelativeLayout r_main;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            r_main = itemView.findViewById(R.id.r_main);
+
             wishlist_no = itemView.findViewById(R.id.wishlist_no);
             title_name = itemView.findViewById(R.id.title_name);
             extra_charge = itemView.findViewById(R.id.extra_charge);
             amount = itemView.findViewById(R.id.amount);
-
-
 
         }
     }

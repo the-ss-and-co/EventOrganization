@@ -6,6 +6,8 @@
     android:layout_margin="6dp">
 
    <RelativeLayout
+
+       android:id="@+id/r_main"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        >
@@ -22,7 +24,7 @@
         android:id="@+id/beachimg"
         android:layout_width="match_parent"
         android:layout_height="260dp"
-        android:background="@drawable/venderbeach"
+        android:background="@drawable/img9"
         />
        <ImageView
            android:layout_width="wrap_content"

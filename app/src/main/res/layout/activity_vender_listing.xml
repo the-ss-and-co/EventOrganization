@@ -21,10 +21,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottum_nev_menuitem"
+        app:labelVisibilityMode="labeled"
         android:background="?android:attr/windowBackground"
+        app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+        app:itemTextAppearanceInactive="@style/BottomNavigationView"
         app:itemIconTint="@color/nav_tab_color"
        app:itemTextColor="@color/nav_tab_color">
 
     </android.support.design.widget.BottomNavigationView>
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/bottom_nev"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true">-->
+        <!--<include layout="@layout/bottomnav"></include>-->
+    <!--</RelativeLayout>-->
 
 </RelativeLayout>

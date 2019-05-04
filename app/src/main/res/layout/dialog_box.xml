@@ -75,6 +75,4 @@
             android:singleLine="true"
             android:layout_marginBottom="20dp"
             />
-
-
 </RelativeLayout>
