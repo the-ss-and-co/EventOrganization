@@ -17,8 +17,6 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 

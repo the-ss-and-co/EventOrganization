@@ -1,6 +1,7 @@
 package com.Myproject.myapp.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.Myproject.myapp.Activity.ImageGalleryView;
 import com.Myproject.myapp.Model.Eventimage;
 import com.Myproject.myapp.R;
 
@@ -30,7 +32,13 @@ public class EventImageAdapter extends RecyclerView.Adapter<EventImageAdapter.My
 
     @Override
     public void onBindViewHolder(@NonNull EventImageAdapter.MyviewHOlderImage myviewHOlderImage, int i) {
-        myviewHOlderImage.imageView.setImageResource(arrayList.get(i).getImage());
+        myviewHOlderImage.imageView.setBackgroundResource(arrayList.get(i).getImage());
+        myviewHOlderImage.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context, ImageGalleryView.class));
+            }
+        });
 
     }
 

@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
@@ -12,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.Myproject.myapp.Activity.VenderListingActivity;
@@ -26,6 +29,8 @@ public class VenderDetailsFragment extends Fragment {
     RecyclerView recycler_event;
     ArrayList<EventModel>arrayList;
     ImageView img_back;
+    RelativeLayout image_rel;
+
 
     @Nullable
     @Override
@@ -41,11 +46,12 @@ public class VenderDetailsFragment extends Fragment {
 
     private void initview(View view) {
         img_back=view.findViewById(R.id.img_back);
+        image_rel = view.findViewById(R.id.r2);
         txt_distance=view.findViewById(R.id.txt_distance);
         txt_extra=view.findViewById(R.id.txt_extra);
         recycler_event=view.findViewById(R.id.recycler_event);
         arrayList=new ArrayList<>();
-adddata(arrayList);
+        adddata(arrayList);
         String s="Destance Between  destinitation and  vender is above ";
         String next = "<font color='#000'>30KM</font>";
        String e= "Vender Charge extra on disdance above ";
@@ -53,10 +59,16 @@ adddata(arrayList);
         txt_distance.setText(Html.fromHtml(s+next));
         Eventa2dapter dapter=new Eventa2dapter(arrayList,getContext());
         recycler_event.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-recycler_event.setAdapter(dapter);
-img_back.setOnClickListener(v -> {
-    startActivity(new Intent(getContext(), VenderListingActivity.class));
-});
+        recycler_event.setAdapter(dapter);
+        img_back.setOnClickListener(v -> {
+         startActivity(new Intent(getContext(), VenderListingActivity.class));
+          });
+        image_rel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                replace(new WorkShopGallery());
+            }
+        });
 
     }
 
@@ -65,5 +77,20 @@ img_back.setOnClickListener(v -> {
         arrayList.add(new EventModel("Birthday",0,true));
         arrayList.add(new EventModel("Funeral",0,false));
         arrayList.add(new EventModel("Funeral",0,false));
+    }
+
+    private void replace(Fragment fragment) {
+        String backStateName = fragment.getClass().getName();
+        assert getFragmentManager() != null;
+        boolean fragmentPopped = getFragmentManager().popBackStackImmediate(backStateName, 0);
+
+        if (!fragmentPopped) {
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.container_vender_details, fragment);
+            ft.addToBackStack(backStateName);
+            ft.commit();
+
+        }
     }
 }
