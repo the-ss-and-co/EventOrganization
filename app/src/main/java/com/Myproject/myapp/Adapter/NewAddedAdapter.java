@@ -36,11 +36,11 @@ Context context;
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-viewHolder.name.setText(arrayList.get(i).getName());
-viewHolder.address.setText(arrayList.get(i).getAddress());
-viewHolder.count.setText(arrayList.get(i).getCount()+" people looking for");
-viewHolder.imageView.setBackgroundResource(R.drawable.img4);
-viewHolder.r_main.setOnClickListener(new View.OnClickListener() {
+   viewHolder.name.setText(arrayList.get(i).getName());
+   viewHolder.address.setText(arrayList.get(i).getAddress());
+   viewHolder.count.setText(arrayList.get(i).getCount()+" people looking for");
+   viewHolder.imageView.setBackgroundResource(R.drawable.img4);
+   viewHolder.r_main.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         context.startActivity(new Intent(context, VenderDetailsActivity.class));

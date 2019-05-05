@@ -40,11 +40,11 @@ public class WorkShopGallery extends Fragment {
         arrayList.add(new EventTag("Event"));
         arrayList.add(new EventTag("Event"));
 
-        arrayListimage.add(new Eventimage(R.drawable.img4));
-        arrayListimage.add(new Eventimage(R.drawable.img11));
-        arrayListimage.add(new Eventimage(R.drawable.img4));
-        arrayListimage.add(new Eventimage(R.drawable.img11));
-        arrayListimage.add(new Eventimage(R.drawable.img4));
+        arrayListimage.add(new Eventimage(R.drawable.price1));
+        arrayListimage.add(new Eventimage(R.drawable.prince2));
+        arrayListimage.add(new Eventimage(R.drawable.price1));
+        arrayListimage.add(new Eventimage(R.drawable.prince2));
+        arrayListimage.add(new Eventimage(R.drawable.price1));
 
 
 
