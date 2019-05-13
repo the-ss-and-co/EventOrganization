@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+  >
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pre wading"
+        android:textSize="16dp"
+        android:textColor="@color/lightblank"
+        android:paddingLeft="5dp"
+        android:buttonTint="@color/checkbox_filter_tint"
+        android:fontFamily="@font/quicksand"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rupeeblack"
+            android:layout_marginTop="5dp"
+            />
+        <TextView
+            android:id="@+id/txt_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2000"
+            android:layout_gravity="center"
+            android:textSize="17dp"
+            android:textColor="@color/lightblank"
+            android:fontFamily="@font/quicksand"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

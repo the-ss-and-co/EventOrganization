@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/rrr">
+        <android.support.v7.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="5dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/back_arrw"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_arrow_back_black_24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Package Details"
+                    android:layout_toRightOf="@+id/back_arrw"
+                    android:layout_centerVertical="true"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/quicksand_bold"/>
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="19dp"
+                    android:src="@drawable/call"
+                    />
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="13dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Festave Fream- Take a stop in your moment"
+                android:textSize="24dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/black"
+                />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Destination Address"
+    android:layout_marginTop="10dp"
+    android:textSize="14dp"
+    android:fontFamily="@font/quicksand"
+    android:textColor="@color/red"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+
+                    android:text="Sukantanagar,Secter 4,near Nicco Park,Kolkata-700097"
+                    android:textSize="16dp"
+                    android:layout_toLeftOf="@+id/change_event"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/quicksand"/>
+                <TextView
+                    android:id="@+id/change_event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:background="@drawable/btn_change"
+                    android:text="Change"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightblank"
+                android:layout_marginTop="15dp"></View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event Place/House Name"
+                android:layout_marginTop="10dp"
+                android:textSize="14dp"
+                android:fontFamily="@font/quicksand"
+                android:textColor="@color/red"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MY House Name"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="16dp"
+                    android:layout_toLeftOf="@+id/change_house"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/quicksand"/>
+                <TextView
+                    android:id="@+id/change_house"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:background="@drawable/btn_change"
+                    android:text="Change"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightblank"
+                android:layout_marginTop="15dp"></View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price BreakUp"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/black"
+                android:textSize="19dp"
+                />
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_event_details"
+                android:layout_marginTop="10dp"
+                android:nestedScrollingEnabled="false">
+            </android.support.v7.widget.RecyclerView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightblank"
+                android:layout_marginTop="8dp">
+
+            </View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Preffered Equipment (if any)"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/black"
+                android:textSize="19dp"
+                />
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_equipment_details"
+                android:layout_marginTop="10dp"
+                android:nestedScrollingEnabled="false">
+            </android.support.v7.widget.RecyclerView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightblank"
+                android:layout_marginTop="8dp">
+
+            </View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Albums"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/black"
+                android:textSize="19dp"
+                />
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_Albums_details"
+                android:layout_marginTop="10dp"
+                android:nestedScrollingEnabled="false">
+            </android.support.v7.widget.RecyclerView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightblank"
+                android:layout_marginTop="8dp">
+
+            </View>
+<include layout="@layout/packagedetails2">
+
+</include>
+        </LinearLayout>
+        </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rrr"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Advance Pay"
+    android:id="@+id/tt"
+    android:fontFamily="@font/quicksand"
+    android:textColor="@color/lightblank"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="5dp"
+    android:textSize="15sp"
+/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tt"
+                    android:layout_centerInParent="true">
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:src="@drawable/rupeeblack"
+                        android:layout_marginTop="4dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20000"
+                        android:layout_gravity="center"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+
+            </RelativeLayout>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/red"
+                android:text="Set Date"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:fontFamily="@font/quicksand"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

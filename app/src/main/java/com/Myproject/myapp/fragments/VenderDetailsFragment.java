@@ -5,12 +5,15 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,12 +24,12 @@ import com.Myproject.myapp.R;
 
 import java.util.ArrayList;
 
-public class VenderDetailsFragment extends Fragment {
+public class VenderDetailsFragment extends Fragment implements View.OnClickListener {
     TextView txt_distance,txt_extra;
     RecyclerView recycler_event;
     ArrayList<EventModel>arrayList;
     ImageView img_back;
-
+Button btn_explore_package;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -44,8 +47,15 @@ public class VenderDetailsFragment extends Fragment {
         txt_distance=view.findViewById(R.id.txt_distance);
         txt_extra=view.findViewById(R.id.txt_extra);
         recycler_event=view.findViewById(R.id.recycler_event);
+        btn_explore_package=view.findViewById(R.id.btn_explore_package);
+
+        btn_explore_package.setOnClickListener(this);
+        img_back.setOnClickListener(this);
+
         arrayList=new ArrayList<>();
 adddata(arrayList);
+
+
         String s="Destance Between  destinitation and  vender is above ";
         String next = "<font color='#000'>30KM</font>";
        String e= "Vender Charge extra on disdance above ";
@@ -54,16 +64,39 @@ adddata(arrayList);
         Eventa2dapter dapter=new Eventa2dapter(arrayList,getContext());
         recycler_event.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
 recycler_event.setAdapter(dapter);
-img_back.setOnClickListener(v -> {
-    startActivity(new Intent(getContext(), VenderListingActivity.class));
-});
+
 
     }
 
     private void adddata(ArrayList<EventModel> arrayList) {
         arrayList.add(new EventModel("Marriage",0,true));
-        arrayList.add(new EventModel("Birthday",0,true));
+        arrayList.add(new EventModel("Birthday",0,false));
         arrayList.add(new EventModel("Funeral",0,false));
         arrayList.add(new EventModel("Funeral",0,false));
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.img_back:
+                startActivity(new Intent(getContext(), VenderListingActivity.class));
+                getActivity().finish();
+                break;
+            case R.id.btn_explore_package :
+              replace(new PackageList());
+        break;
+        }
+    }
+    private void replace(Fragment fragment) {
+        String backStateName = fragment.getClass().getName();
+        boolean fragmentPopped = getFragmentManager().popBackStackImmediate(backStateName, 0);
+
+        if (!fragmentPopped) {
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.container_vender_details, fragment);
+            ft.addToBackStack(backStateName);
+            ft.commit();
+        }
     }
 }

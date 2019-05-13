@@ -65,7 +65,7 @@
         <EditText
             android:id="@+id/name_change"
             android:layout_below="@+id/other"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="5dp"
             android:layout_marginStart="20dp"

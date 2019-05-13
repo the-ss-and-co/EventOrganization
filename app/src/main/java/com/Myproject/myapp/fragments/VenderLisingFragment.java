@@ -1,6 +1,7 @@
 package com.Myproject.myapp.fragments;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -22,6 +23,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
+import com.Myproject.myapp.Activity.Location;
 import com.Myproject.myapp.Adapter.BeachAdapter;
 import com.Myproject.myapp.Adapter.NewAddedAdapter;
 import com.Myproject.myapp.Model.Modelbeachitem;
@@ -34,12 +36,11 @@ public class VenderLisingFragment extends Fragment implements View.OnClickListen
     RecyclerView recycler_new_add, beach_item;
     ImageView filter;
 
-    RelativeLayout change_event;
+    RelativeLayout change_event,rel_change_add;
 
     RelativeLayout rel_change_event;
     ArrayList<NewAddedlistModel> arrayList;
     ArrayList<Modelbeachitem> arrayList2;
-    ImageButton change_service;
     TextView service_name;
 
     @Nullable
@@ -58,11 +59,10 @@ public class VenderLisingFragment extends Fragment implements View.OnClickListen
         recycler_new_add = view.findViewById(R.id.recycler_new_add);
         filter = view.findViewById(R.id.filter);
         rel_change_event = view.findViewById(R.id.rel_change_event);
-        change_service = view.findViewById(R.id.change_service);
+//        change_service = view.findViewById(R.id.change_service);
         service_name = view.findViewById(R.id.service_name);
-
+        rel_change_add=view.findViewById(R.id.rel_change_add);
         beach_item = view.findViewById(R.id.beachimg_item);
-        filter = view.findViewById(R.id.filter);
         change_event = view.findViewById(R.id.rel_change_event);
 
         arrayList = new ArrayList<>();
@@ -73,9 +73,11 @@ public class VenderLisingFragment extends Fragment implements View.OnClickListen
         NewAddedAdapter adapter = new NewAddedAdapter(arrayList, getContext());
         recycler_new_add.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         recycler_new_add.setAdapter(adapter);
-        filter.setOnClickListener(this);
+        service_name.setOnClickListener(this);
         rel_change_event.setOnClickListener(this);
-        change_service.setOnClickListener(this);
+        rel_change_add.setOnClickListener(this);
+        filter.setOnClickListener(this);
+
 
         recycler_new_add.setAdapter(adapter);
         BeachAdapter beachAdapter = new BeachAdapter(arrayList2, getContext());
@@ -131,9 +133,14 @@ public class VenderLisingFragment extends Fragment implements View.OnClickListen
                 dialog.setContentView(R.layout.dialog_box);
                 dialog.show();
                 break;
-            case R.id.change_service:
+            case R.id.service_name:
                 opendialog();
                 break;
+            case R.id.rel_change_add:
+                Intent intent=new Intent(getContext(), Location.class);
+                intent.putExtra("type","change");
+                startActivity(intent);
+                getActivity().finish();
         }
     }
 

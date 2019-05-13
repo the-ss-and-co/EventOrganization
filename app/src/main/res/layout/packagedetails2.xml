@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:textSize="18dp"
+            android:fontFamily="@font/quicksand"
+            android:textColor="@color/lightblank"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/rupeeblack"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200001"
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:textColor="@color/lightblank"
+                android:fontFamily="@font/quicksand"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/ll">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount For Extra Distance"
+                android:textSize="18dp"
+                android:fontFamily="@font/quicksand"
+                android:textColor="@color/lightblank"/>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/round_error"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="3dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/rupeeblack"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2000"
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:textColor="@color/lightblank"
+                android:fontFamily="@font/quicksand"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightblank"
+        android:layout_marginTop="8dp"></View>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grand Total"
+            android:textSize="18dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="@color/black"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/rupeeblack">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200000"
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/quicksand_bold"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp">
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Advance Payment"
+        android:textSize="17dp"
+        android:paddingLeft="5dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:buttonTint="@color/checkbox_filter_tint"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/rupeeblack"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center">
+
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20000"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/quicksand_bold"/>
+    </LinearLayout>
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Payment"
+            android:textSize="17dp"
+            android:paddingLeft="5dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:buttonTint="@color/checkbox_filter_tint"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/rupeeblack"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20000"
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/quicksand_bold"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Due Payment"
+            android:textSize="18dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="@color/black"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/rupeeblack"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="2001"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:layout_marginTop="35dp"
+        android:textSize="18dp"
+        android:layout_marginBottom="35dp"
+        android:fontFamily="@font/quicksand"
+        android:textColor="@color/lightblank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This Vender charge extra ammount on distrance above 50km"/>
+</LinearLayout>

@@ -1,5 +1,6 @@
 package com.Myproject.myapp.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,6 +16,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.Myproject.myapp.Activity.VenderListingActivity;
 import com.Myproject.myapp.R;
 
 public class LocationAdress2 extends Fragment {
@@ -22,7 +24,7 @@ public class LocationAdress2 extends Fragment {
     TextView Locationtext;
     ImageView Backarrow;
     Button Skip,save;
-String address;
+String address,type="";
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -39,9 +41,15 @@ String address;
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         savedInstanceState=getArguments();
         if(savedInstanceState!=null){
             address=savedInstanceState.getString("address");
+
+            if(savedInstanceState.containsKey("type")){
+                type=savedInstanceState.getString("type");
+
+            }
             Locationtext.setText(address);
         }
 
@@ -55,13 +63,23 @@ String address;
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                replace(new DestinationAdress());
+                try {
+                    if(type.equals("change")){
+                        getContext().startActivity(new Intent(getContext(), VenderListingActivity.class));
+                        getActivity().finish();
+                    }else
+                        replace(new DestinationAdress());
+
+                }catch (Exception e){
+                    replace(new DestinationAdress());
+
+                }
             }
         });
 
-    }
+     }
 
-    private void replace(Fragment fragment) {
+    private void replace(Fragment fragment){
         String backStateName = fragment.getClass().getName();
         boolean fragmentPopped = getFragmentManager().popBackStackImmediate(backStateName,0);
 

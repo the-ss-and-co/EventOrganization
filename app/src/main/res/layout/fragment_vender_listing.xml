@@ -3,236 +3,244 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:corner="http://schemas.android.com/tools">
-    <ScrollView
+
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    <RelativeLayout
-        android:id="@+id/rr"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="@color/red">
-
-        <TextView
-            android:id="@+id/service_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_gravity="center"
-            android:layout_marginLeft="15dp"
-            android:background="@drawable/anvd"
-            android:fontFamily="@font/quicksand_bold"
-            android:paddingHorizontal="6dp"
-            android:paddingLeft="7dp"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp"
-            android:text="Phonographer"
-            android:textColor="#fff"
-            android:textSize="18dp" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="25dp">
-
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginRight="25dp"
-                android:padding="5dp"
-                android:layout_gravity="center"
-                android:src="@drawable/bell_alarm" />
-
-            <ImageView
-                android:id="@+id/filter"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:padding="6dp"
-                android:src="@drawable/filter_icon" />
-
-        </LinearLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/shadow"
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_below="@+id/rr"
-        android:background="@drawable/gradient_layout">
-
-    </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/ll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/shadow"
-        android:layout_marginTop="15dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/event_name"
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="19dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Marriage"
-                android:textColor="#000"
-                android:textSize="22dp" />
+                android:layout_height="wrap_content">
 
-            <RelativeLayout
-                android:id="@+id/rel_change_event"
-                android:layout_width="65dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="30dp"
-                android:background="@drawable/btn_change">
+                <RelativeLayout
+                    android:id="@+id/rr"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/red">
 
-                <TextView
-                    android:id="@+id/change_event"
+                    <TextView
+                        android:id="@+id/service_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/anvd"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:paddingHorizontal="6dp"
+                        android:paddingLeft="7dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:text="Phonographer"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="25dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="25dp"
+                            android:padding="5dp"
+                            android:src="@drawable/bell_alarm" />
+
+                        <ImageView
+                            android:id="@+id/filter"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:padding="6dp"
+                            android:src="@drawable/filter_icon" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/shadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_below="@+id/rr"
+                    android:background="@drawable/gradient_layout">
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:fontFamily="@font/quicksand_bold"
-                    android:padding="4dp"
-                    android:text="Change"
-                    android:textColor="#fff"
-                    android:textSize="14sp" />
-            </RelativeLayout>
+                    android:layout_below="@+id/shadow"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
 
-        </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp">
 
-        <LinearLayout
-            android:id="@+id/lin"
-            android:layout_width="match_parent"
-            android:layout_height="0.7dp"
-            android:background="#746E6E"
-            android:layout_margin="16dp">
+                        <TextView
+                            android:id="@+id/event_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="19dp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="Marriage"
+                            android:textColor="#000"
+                            android:textSize="22dp" />
 
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/lin_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ll"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical">
+                        <RelativeLayout
+                            android:id="@+id/rel_change_event"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="30dp"
+                            android:background="@drawable/btn_change">
 
-        <RelativeLayout
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp">
+                            <TextView
+                                android:id="@+id/change_event"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/quicksand_bold"
+                                android:padding="4dp"
+                                android:text="Change"
+                                android:textColor="#fff"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
 
-            <TextView
-                android:id="@+id/txt_address"
-                android:layout_width="220dp"
-                android:layout_height="22dp"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="19dp"
-                android:fontFamily="@font/quicksand"
-                android:text="sukanta naagagd d g adbadguya yagaduag"
-                android:textColor="#000"
-                android:textSize="15dp" />
+                    </RelativeLayout>
 
-            <RelativeLayout
-                android:id="@+id/rel_change_add"
-                android:layout_width="65dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="30dp"
-                android:background="@drawable/btn_change">
+                    <LinearLayout
+                        android:id="@+id/lin"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:layout_margin="16dp"
+                        android:background="#746E6E">
 
-                <TextView
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="@font/quicksand_bold"
-                    android:text="Change"
-                    android:textColor="#fff"
-                    android:padding="4dp"
-                    android:textSize="14dp" />
+                    android:layout_below="@+id/ll"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txt_address"
+                            android:layout_width="220dp"
+                            android:layout_height="22dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="19dp"
+                            android:fontFamily="@font/quicksand"
+                            android:text="sukanta naagagd d g adbadguya yagaduag"
+                            android:textColor="#000"
+                            android:textSize="15dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/rel_change_add"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="30dp"
+                            android:background="@drawable/btn_change">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/quicksand_bold"
+                                android:padding="4dp"
+                                android:text="Change"
+                                android:textColor="#fff"
+                                android:textSize="14dp" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:layout_margin="16dp"
+                        android:background="#746E6E"
+                        android:orientation="vertical"></LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lin_add"
+                    android:layout_marginLeft="9dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/newADDED"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="Newly  Added"
+                        android:textColor="#000"
+                        android:textSize="23dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_new_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/newADDED"
+                        android:layout_marginTop="10dp"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal">
+
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/beachimg_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lin3"
+                    android:layout_margin="9dp"
+                    android:nestedScrollingEnabled="false">
+
+                </android.support.v7.widget.RecyclerView>
+
             </RelativeLayout>
 
+
         </RelativeLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:id="@+id/lin2"
-            android:layout_width="match_parent"
-            android:layout_height="0.7dp"
-            android:background="#746E6E"
-            android:layout_margin="16dp">
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/lin3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@+id/lin_add"
-        android:layout_marginLeft="9dp"
-        >
-        <TextView
-            android:id="@+id/newADDED"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Newly  Added"
-            android:fontFamily="@font/quicksand_bold"
-            android:textColor="#000"
-            android:textSize="23dp"
-            android:layout_marginLeft="3dp"/>
-        <android.support.v7.widget.RecyclerView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/newADDED"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:id="@+id/recycler_new_add">
-
-        </android.support.v7.widget.RecyclerView>
-    </LinearLayout>
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/beachimg_item"
-            android:layout_below="@+id/lin3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="9dp"
-            >
-
-        </android.support.v7.widget.RecyclerView>
-
-    </RelativeLayout>
-
-
-</RelativeLayout>
-    </ScrollView>
-    <ImageButton
-        android:id="@+id/change_service"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="18dp"
-        android:src="@drawable/menu1"
-        android:background="@drawable/roundbtn"
-        />
+    </android.support.v4.widget.NestedScrollView>
+    <!--<ImageButton-->
+        <!--android:id="@+id/change_service"-->
+        <!--android:layout_width="55dp"-->
+        <!--android:layout_height="55dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_margin="18dp"-->
+        <!--android:src="@drawable/menu1"-->
+        <!--android:background="@drawable/roundbtn"-->
+        <!--/>-->
 </RelativeLayout>

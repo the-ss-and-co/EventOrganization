@@ -1,5 +1,6 @@
 package com.Myproject.myapp.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,13 +14,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.Myproject.myapp.Activity.VenderListingActivity;
 import com.Myproject.myapp.R;
 
 public class LocationAdress extends Fragment {
     ImageView backarrow;
     TextInputEditText Eventhouse,Areaname,City,Town,State,Pin,Landmark;
     Button save;
-String city,state,pin;
+String city,state,pin,type="";
 
     @Nullable
     @Override
@@ -46,6 +48,11 @@ String city,state,pin;
 city=savedInstanceState.getString("city");
 state=savedInstanceState.getString("state");
 pin=savedInstanceState.getString("postalCode");
+if(savedInstanceState.containsKey("type")){
+    type=savedInstanceState.getString("type");
+
+}
+
 City.setText(city);
 State.setText(state);
 Pin.setText(pin);
@@ -53,24 +60,37 @@ Pin.setText(pin);
 backarrow.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        replace(new GetLocationFragment());
+        replace(new GetLocationFragment(),type);
     }
 });
 save.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-replace(new DestinationAdress());
+        try {
+            if(type.equals("change")){
+                getContext().startActivity(new Intent(getContext(), VenderListingActivity.class));
+                getActivity().finish();
+            }else
+                replace(new DestinationAdress(),type);
+        }catch (Exception e){
+            replace(new DestinationAdress(),type);
+
+        }
     }
 });
         }
     }
 
 
-    private void replace(Fragment fragment) {
+    private void replace(Fragment fragment,String type) {
         String backStateName = fragment.getClass().getName();
         boolean fragmentPopped = getFragmentManager().popBackStackImmediate(backStateName,0);
 
         if (!fragmentPopped) {
+
+            Bundle bundle=new Bundle();
+            bundle.putString("type",type);
+            fragment.setArguments(bundle);
             FragmentManager fm = getFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
             ft.replace(R.id.location_contaner, fragment);

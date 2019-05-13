@@ -59,13 +59,12 @@ public class GetLocationFragment extends Fragment implements
     TextView getlocation;
     Button btn_save;
     ProgressDialog progressDialog;
-    String city,state,postalCode,address;
+    String city,state,postalCode,address,type="";
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        new LocationPermission(getContext(),getActivity(),this).checkPermission();
 
         return inflater.inflate(R.layout.fragment_getlocation,container,false);
     }
@@ -73,7 +72,13 @@ public class GetLocationFragment extends Fragment implements
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
-
+Bundle bundle=new Bundle();
+bundle=getArguments();
+if(bundle!=null){
+    type=bundle.getString("type");
+}else {
+    type="no";
+}
         mGoogleApiClient = new GoogleApiClient.Builder(getContext())
                 .addApi(Places.GEO_DATA_API)
                 .enableAutoManage(getActivity(), GOOGLE_API_CLIENT_ID, this)
@@ -159,13 +164,15 @@ generateAddress(latLng);
         int id=v.getId();
         switch (id){
             case R.id.getlocation:
+                new LocationPermission(getContext(),getActivity(),this).checkPermission();
+
                 getmycurrentlocation();
                 break;
             case R.id.btn_save:
                 if(!autoCompleteTextView.getText().toString().isEmpty()){
-                    replace(new LocationAdress());
-                }else {
-                replace(new LocationAdress2());
+                        replace(new LocationAdress(),type); }
+                        else {
+                replace(new LocationAdress2(),type);
                 }
                 break;
         }
@@ -203,13 +210,14 @@ generateAddress(latLng);
 
     }
 
-    private void replace(Fragment fg){
+    private void replace(Fragment fg,String type){
 
 Bundle bundle=new Bundle();
 bundle.putString("city",city);
 bundle.putString("state",state);
 bundle.putString("postalCode",postalCode);
 bundle.putString("address",address);
+bundle.putString("type",type);
 fg.setArguments(bundle);
         String backStateName = fg.getClass().getName();
         boolean fragmentPopped = getFragmentManager().popBackStackImmediate(backStateName,0);
