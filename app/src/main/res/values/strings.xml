@@ -42,4 +42,9 @@
     <string name="name_of_the_event">Name of the event</string>
     <string name="workshop_gallery">Workshop Gallery</string>
     <string name="event_tag">Event</string>
+    <string name="set_dates">Set Dates</string>
+    <string name="todo">TODO</string>
+    <string name="apply">Apply</string>
+    <string name="item_1">item 1</string>
+    <string name="_23_jan_2018">jan 23 2018</string>
 </resources>
