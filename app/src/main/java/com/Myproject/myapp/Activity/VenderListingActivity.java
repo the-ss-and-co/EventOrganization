@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.Myproject.myapp.R;
+import com.Myproject.myapp.fragments.BookingFragment;
 import com.Myproject.myapp.fragments.VenderLisingFragment;
 
 public class VenderListingActivity extends AppCompatActivity implements View.OnClickListener {
@@ -32,7 +33,7 @@ public class VenderListingActivity extends AppCompatActivity implements View.OnC
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_near:
-                    // replace(new VenderLisingFragment());
+                     replace(new VenderLisingFragment());
                     return true;
                 case R.id.navigation_explore:
 
@@ -43,7 +44,7 @@ public class VenderListingActivity extends AppCompatActivity implements View.OnC
 
                     return true;
                 case R.id.navigation_booking:
-
+replace(new BookingFragment());
 
                     return true;
                 case R.id.navigation_acc:
@@ -101,18 +102,15 @@ public class VenderListingActivity extends AppCompatActivity implements View.OnC
 
     private void replace(Fragment fragment) {
         String backStateName = fragment.getClass().getName();
-        boolean fragmentPopped = getFragmentManager().popBackStackImmediate(backStateName, 0);
-
+        boolean fragmentPopped = getSupportFragmentManager().popBackStackImmediate(backStateName, 0);
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
         if (!fragmentPopped) {
-            FragmentManager fm = getSupportFragmentManager();
-            FragmentTransaction ft = fm.beginTransaction();
-            ft.replace(R.id.location_contaner, fragment);
-            ft.addToBackStack(backStateName);
+            ft.replace(R.id.listing_container, fragment);
+            ft.addToBackStack(null);
             ft.commit();
-
         }
     }
-
     @Override
     public void onClick(View v) {
 
