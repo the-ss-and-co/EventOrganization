@@ -40,12 +40,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyviewHolder
     public void onBindViewHolder(@NonNull EventAdapter.MyviewHolder myviewHolder, int i) {
         myviewHolder.textView.setText(arrayList.get(i).getEventText());
         myviewHolder.imageView.setImageResource(arrayList.get(i).getImage());
-        myviewHolder.rel.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        context.startActivity(new Intent(context,Location.class));
-    }
-});
+        myviewHolder.rel.setOnClickListener(v -> context.startActivity(new Intent(context,Location.class)));
     }
 
     @Override

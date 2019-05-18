@@ -1,6 +1,6 @@
 package com.Myproject.myapp.Model;
 
-public class DateModel {
+public class Date_Model {
     String month,day,year;
 
     public String getMonth() {

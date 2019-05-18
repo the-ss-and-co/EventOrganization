@@ -10,9 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.Myproject.myapp.Adapter.DateAdapter;
+import com.Myproject.myapp.Adapter.DateAdapter_upcoming;
 import com.Myproject.myapp.Adapter.UpcomingBookingAdaper;
-import com.Myproject.myapp.Model.DateModel;
+import com.Myproject.myapp.Model.Date_Model;
 import com.Myproject.myapp.Model.UpcomingModel;
 import com.Myproject.myapp.R;
 
@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class UpcomingFragment extends Fragment {
     RecyclerView recycler_date,recycler_upcminglist;
-    ArrayList<DateModel>arrayList;
+    ArrayList<Date_Model>arrayList;
     ArrayList<UpcomingModel>upcomingModelArrayList;
 
     @Nullable
@@ -46,7 +46,7 @@ public class UpcomingFragment extends Fragment {
         addlistdata(upcomingModelArrayList);
         adddata(arrayList);
 
-        DateAdapter adapter=new DateAdapter(arrayList,getContext());
+        DateAdapter_upcoming adapter=new DateAdapter_upcoming(arrayList,getContext());
         recycler_date.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
         recycler_date.setAdapter(adapter);
 
@@ -63,20 +63,20 @@ recycler_upcminglist.setAdapter(bookingAdaper);
                 "Merrage","20000","5000","****"));
     }
 
-    private void adddata(ArrayList<DateModel> arrayList) {
-        DateModel dateModel=new DateModel();
+    private void adddata(ArrayList<Date_Model> arrayList) {
+        Date_Model dateModel=new Date_Model();
         dateModel.setDay("22");
         dateModel.setMonth("MAR");
         dateModel.setYear("2019");
-        DateModel dateModel1=new DateModel();
+        Date_Model dateModel1=new Date_Model();
         dateModel1.setDay("02");
         dateModel1.setMonth("APR");
         dateModel1.setYear("2019");
-        DateModel dateModel2=new DateModel();
+        Date_Model dateModel2=new Date_Model();
         dateModel2.setDay("28");
         dateModel2.setMonth("FEB");
         dateModel2.setYear("2020");
-        DateModel dateModel3=new DateModel();
+        Date_Model dateModel3=new Date_Model();
         dateModel3.setDay("28");
         dateModel3.setMonth("FEB");
         dateModel3.setYear("2019");
