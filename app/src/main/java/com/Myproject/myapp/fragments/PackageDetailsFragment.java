@@ -4,11 +4,14 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.Myproject.myapp.Adapter.AlbamAdapter;
 import com.Myproject.myapp.Adapter.Equipmentlistapapter;
@@ -23,6 +26,7 @@ public class PackageDetailsFragment extends Fragment {
     ArrayList<pricemodel>eventarrayList;
     ArrayList<pricemodel>equipmentarraylist;
     ArrayList<pricemodel>albamarraylist;
+    Button Set_Date;
 
 
     @Nullable
@@ -74,6 +78,14 @@ return inflater.inflate(R.layout.packagedetailsfragment,container,false);
         recycler_event_details=view.findViewById(R.id.recycler_event_details);
         recycler_equipment_details=view.findViewById(R.id.recycler_equipment_details);
         recycler_Albums_details=view.findViewById(R.id.recycler_Albums_details);
+        Set_Date = view.findViewById(R.id.set_date);
+
+        Set_Date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               replace(new SetDate());
+            }
+        });
 
         eventarrayList=new ArrayList<>();
         equipmentarraylist=new ArrayList<>();
@@ -113,4 +125,18 @@ return inflater.inflate(R.layout.packagedetailsfragment,container,false);
      arrayList.add(pricemodel1);
      arrayList.add(pricemodel2);
  }
+    private void replace(Fragment fragment){
+        String backStateName = fragment.getClass().getName();
+        boolean fragmentPopped = getFragmentManager().popBackStackImmediate(backStateName,0);
+
+        if (!fragmentPopped) {
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.container_vender_details,fragment);
+            ft.addToBackStack(backStateName);
+            ft.commit();
+
+        }
+
+    }
 }
