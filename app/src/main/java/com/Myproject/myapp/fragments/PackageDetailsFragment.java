@@ -31,8 +31,8 @@ public class PackageDetailsFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-return inflater.inflate(R.layout.packagedetailsfragment,container,false);
+     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+          return inflater.inflate(R.layout.packagedetailsfragment,container,false);
     }
 
     @Override
