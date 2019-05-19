@@ -13,8 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import com.Myproject.myapp.Adapter.DateAdapter;
-import com.Myproject.myapp.Model.DateModel;
+import com.Myproject.myapp.Adapter.NewDateAdapter;
+import com.Myproject.myapp.Model.NewDateModel;
 import com.Myproject.myapp.R;
 import java.util.ArrayList;
 
@@ -23,8 +23,8 @@ public class NewDateset extends Fragment {
       ImageView Backpressed,Call;
       RecyclerView recyclerView;
       Button apply;
-      ArrayList<DateModel> arrayList;
-      DateAdapter dateAdapter;
+      ArrayList<NewDateModel> arrayList;
+      NewDateAdapter dateAdapter;
 
 
 
@@ -32,19 +32,19 @@ public class NewDateset extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.set_dates,container,false);
+        View view = inflater.inflate(R.layout.new_set_dates,container,false);
         Backpressed = view.findViewById(R.id.back_press);
         Call = view.findViewById(R.id.call);
         recyclerView = view.findViewById(R.id.item_date);
         apply =view.findViewById(R.id.apply);
 
         arrayList = new ArrayList<>();
-        arrayList.add(new DateModel("item1",""));
-        arrayList.add(new DateModel("item1","12/1/19"));
-        arrayList.add(new DateModel("item1","12/1/19"));
+        arrayList.add(new NewDateModel("item1",""));
+        arrayList.add(new NewDateModel("item1","12/1/19"));
+        arrayList.add(new NewDateModel("item1","12/1/19"));
 
 
-        dateAdapter = new DateAdapter(arrayList,getContext());
+        dateAdapter = new NewDateAdapter(arrayList,getContext());
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(dateAdapter);

@@ -1,10 +1,8 @@
 package com.Myproject.myapp.Adapter;
 
-import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.support.v4.app.DialogFragment;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,26 +11,26 @@ import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.Myproject.myapp.Model.DateModel;
+import com.Myproject.myapp.Model.NewDateModel;
 import com.Myproject.myapp.R;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class DateAdapter extends RecyclerView.Adapter<DateAdapter.ViewHolder> implements DatePickerDialog.OnDateSetListener {
-    ArrayList<DateModel> arrayList;
+public class NewDateAdapter extends RecyclerView.Adapter<NewDateAdapter.ViewHolder> implements DatePickerDialog.OnDateSetListener {
+    ArrayList<NewDateModel> arrayList;
     Context context;
      String dateon;
 
 
-    public  DateAdapter(ArrayList<DateModel> arrayList,Context context){
+    public NewDateAdapter(ArrayList<NewDateModel> arrayList, Context context){
         this.arrayList=arrayList;
         this.context=context;
 
     }
     @NonNull
     @Override
-    public DateAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public NewDateAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.date_item,viewGroup,false);
 
         return new ViewHolder(view);

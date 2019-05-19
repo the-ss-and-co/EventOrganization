@@ -1,12 +1,12 @@
 package com.Myproject.myapp.Model;
 
-public class DateModel {
+public class NewDateModel {
     String item;
     String date;
-    public DateModel(){
+    public NewDateModel(){
 
     }
-    public DateModel(String item, String date) {
+    public NewDateModel(String item, String date) {
         this.item = item;
         this.date = date;
     }
