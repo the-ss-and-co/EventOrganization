@@ -83,7 +83,7 @@ public class PackageDetailsFragment extends Fragment {
         Set_Date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               replace(new SetDate());
+               replace(new NewDateset());
             }
         });
 
