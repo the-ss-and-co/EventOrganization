@@ -1,6 +1,6 @@
 package com.Myproject.myapp.fragments;
 
-import android.app.DatePickerDialog;
+
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,22 +12,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.ImageView;
-
 import com.Myproject.myapp.Adapter.DateAdapter;
 import com.Myproject.myapp.Model.DateModel;
 import com.Myproject.myapp.R;
 import java.util.ArrayList;
 
 
-public class SetDate extends Fragment {
+public class NewDateset extends Fragment {
       ImageView Backpressed,Call;
       RecyclerView recyclerView;
       Button apply;
       ArrayList<DateModel> arrayList;
       DateAdapter dateAdapter;
-      DateModel dateModel = new DateModel();
+
 
 
 
