@@ -26,7 +26,7 @@ public class PackageDetailsFragment extends Fragment {
     ArrayList<pricemodel>eventarrayList;
     ArrayList<pricemodel>equipmentarraylist;
     ArrayList<pricemodel>albamarraylist;
-    Button Set_Date;
+    Button Set_Date,btn_payment;
 
 
     @Nullable
@@ -79,6 +79,20 @@ public class PackageDetailsFragment extends Fragment {
         recycler_equipment_details=view.findViewById(R.id.recycler_equipment_details);
         recycler_Albums_details=view.findViewById(R.id.recycler_Albums_details);
         Set_Date = view.findViewById(R.id.set_date);
+        btn_payment=view.findViewById(R.id.btn_payment);
+        Bundle bundle=getArguments();
+        if(bundle!=null){
+            String s=bundle.getString("setdate");
+           if(s.equals("setdate")){
+               btn_payment.setVisibility(View.VISIBLE);
+
+               Set_Date.setVisibility(View.GONE);
+           }
+
+        }
+btn_payment.setOnClickListener(v -> {
+    replace(new PaymentFragment());
+});
 
         Set_Date.setOnClickListener(new View.OnClickListener() {
             @Override

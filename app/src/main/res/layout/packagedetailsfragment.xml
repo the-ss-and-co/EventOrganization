@@ -278,7 +278,19 @@
                 android:text="Set Date"
                 android:textColor="@color/white"
                 android:textSize="22dp"
-                android:fontFamily="@font/quicksand"/>
+                android:fontFamily="@font/quicksand" />
+            <Button
+                android:id="@+id/btn_payment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/green"
+                android:text="Pay Now"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:fontFamily="@font/quicksand"
+                />
+
 
         </LinearLayout>
     </RelativeLayout>
