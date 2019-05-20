@@ -1,8 +1,11 @@
 package com.Myproject.myapp.Adapter;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v4.app.DialogFragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,14 +16,16 @@ import android.widget.TextView;
 
 import com.Myproject.myapp.Model.NewDateModel;
 import com.Myproject.myapp.R;
+import com.Myproject.myapp.Util.Datepicker;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class NewDateAdapter extends RecyclerView.Adapter<NewDateAdapter.ViewHolder> implements DatePickerDialog.OnDateSetListener {
+import static com.Myproject.myapp.R.layout.date_item;
+
+public class NewDateAdapter extends RecyclerView.Adapter<NewDateAdapter.ViewHolder>  implements Datepicker.ondateselectListener{
     ArrayList<NewDateModel> arrayList;
     Context context;
-     String dateon;
 
 
     public NewDateAdapter(ArrayList<NewDateModel> arrayList, Context context){
@@ -31,8 +36,7 @@ public class NewDateAdapter extends RecyclerView.Adapter<NewDateAdapter.ViewHold
     @NonNull
     @Override
     public NewDateAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.date_item,viewGroup,false);
-
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(date_item,viewGroup,false);
         return new ViewHolder(view);
     }
 
@@ -40,33 +44,31 @@ public class NewDateAdapter extends RecyclerView.Adapter<NewDateAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         viewHolder.date.setText(arrayList.get(i).getDate());
         viewHolder.item.setText(arrayList.get(i).getItem());
+
         viewHolder.calender.setOnClickListener(v -> {
-            Showdatepicker();
+            DialogFragment fragment=new Datepicker(viewHolder.date);
+           // ((Datepicker) fragment).ondateset(this);
+            fragment.show(((AppCompatActivity)context).getSupportFragmentManager(),"DatePick");
         });
 
     }
 
-    private void Showdatepicker() {
-        DatePickerDialog datePickerDialog = new DatePickerDialog(context,this,
-                Calendar.getInstance().get(Calendar.YEAR),
-                Calendar.getInstance().get(Calendar.MONTH),
-                Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
-        );
-        datePickerDialog.show();
 
-    }
 
     @Override
     public int getItemCount() {
         return arrayList.size();
+
     }
 
     @Override
-    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-         dateon = " "+month+"/"+dayOfMonth+"/"+year;
+    public void ondateset(String date) {
+                TextView date_set = ((Activity)context).findViewById(R.id.date);
+                date_set.setText(date);
 
 
     }
+
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView item,date;

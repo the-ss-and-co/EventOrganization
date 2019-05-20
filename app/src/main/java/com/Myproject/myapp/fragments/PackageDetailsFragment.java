@@ -84,6 +84,7 @@ public class PackageDetailsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                replace(new NewDateset());
+              // replace(new SetDate());
             }
         });
 

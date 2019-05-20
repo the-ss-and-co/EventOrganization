@@ -19,7 +19,7 @@ import com.Myproject.myapp.R;
 import java.util.ArrayList;
 
 
-public class NewDateset extends Fragment {
+public class NewDateset extends Fragment  {
       ImageView Backpressed,Call;
       RecyclerView recyclerView;
       Button apply;
@@ -40,8 +40,8 @@ public class NewDateset extends Fragment {
 
         arrayList = new ArrayList<>();
         arrayList.add(new NewDateModel("item1",""));
-        arrayList.add(new NewDateModel("item1","12/1/19"));
-        arrayList.add(new NewDateModel("item1","12/1/19"));
+        arrayList.add(new NewDateModel("item1",""));
+        arrayList.add(new NewDateModel("item1",""));
 
 
         dateAdapter = new NewDateAdapter(arrayList,getContext());

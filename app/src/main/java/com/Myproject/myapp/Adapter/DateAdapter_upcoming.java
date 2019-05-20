@@ -37,9 +37,18 @@ public class DateAdapter_upcoming extends RecyclerView.Adapter<DateAdapter_upcom
         viewHolder.txt_day.setText(arrayList.get(i).getDay());
         viewHolder.txt_month.setText(arrayList.get(i).getMonth());
         viewHolder.txt_year.setText(arrayList.get(i).getYear());
-        item = i;
-        notifyDataSetChanged();
 
+
+        viewHolder.rel_date.setOnClickListener(v -> {
+            item=i;
+            notifyDataSetChanged();
+        });
+        if(item==i){
+            viewHolder.rel_date.setBackgroundColor(context.getResources().getColor(R.color.light_white));
+        }else {
+            viewHolder.rel_date.setBackgroundColor(context.getResources().getColor(R.color.white));
+
+        }
 
     }
 

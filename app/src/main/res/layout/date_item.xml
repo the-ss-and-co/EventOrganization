@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/per_item">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/content"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+                <TextView
+                    android:id="@+id/item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/item_1"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    />
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/red"
+                    android:layout_below="@+id/item"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:visibility="visible"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/calender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_calender"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/todo" />
+        </RelativeLayout>
+
+
+</RelativeLayout>
