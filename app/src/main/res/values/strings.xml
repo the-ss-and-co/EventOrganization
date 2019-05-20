@@ -47,4 +47,11 @@
     <string name="apply">Apply</string>
     <string name="item_1">item 1</string>
     <string name="_23_jan_2018">jan 23 2018</string>
+    <string name="festive_calender">Festive Calender</string>
+    <string name="jan_26_2018">Jan 26 2018</string>
+    <string name="event_house">Event House</string>
+    <string name="total_payment">Total Payment</string>
+    <string name="_3600">\u20B93600</string>
+    <string name="paid">Paid</string>
+    <string name="rate_now">Rate Now</string>
 </resources>

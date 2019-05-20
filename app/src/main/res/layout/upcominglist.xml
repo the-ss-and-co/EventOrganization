@@ -133,9 +133,7 @@ android:fontFamily="@font/quicksand"
                         android:layout_height="9dp"
                         android:src="@drawable/down_arrow"
                         android:layout_marginRight="3dp"
-
                         android:backgroundTint="@color/white"
-
                         android:layout_gravity="center"/>
                 </LinearLayout>
             </LinearLayout>
