@@ -55,22 +55,37 @@
         android:text="@string/due_amount"
         android:textColor="@color/red"
         android:layout_below="@+id/item_recycler"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:fontFamily="@font/quicksand_bold"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         />
     <TextView
+        android:id="@+id/rs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Rs"
+        android:layout_centerVertical="true"
+        android:textColor="@color/red"
+        android:layout_below="@+id/item_recycler"
+        android:layout_marginTop="23dp"
+        android:layout_toEndOf="@+id/due_amount"
+        android:layout_marginStart="10dp"
+        android:textSize="19sp"
+        />
+    <TextView
+        android:id="@+id/due_amount_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/_23_000"
         android:textColor="@color/red"
         android:layout_below="@+id/item_recycler"
-        android:layout_toRightOf="@+id/due_amount"
         android:layout_marginTop="20dp"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:layout_toEndOf="@+id/rs"
+        android:layout_marginStart="3dp"
         android:fontFamily="@font/quicksand_bold"
-        android:layout_marginStart="15dp"/>
+        />
 
     <RelativeLayout
         android:id="@+id/paid_text"
@@ -78,7 +93,7 @@
         android:layout_width="55dp"
         android:layout_height="25dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/paid_back">
         <TextView
             android:layout_width="wrap_content"
@@ -92,11 +107,12 @@
     <TextView
         android:id="@+id/organo"
         android:layout_below="@+id/paid_text"
+        android:layout_marginTop="15dp"
         android:layout_marginStart="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/organo_mentor"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textColor="#000000"
         android:fontFamily="@font/quicksand_bold"
         />
@@ -108,9 +124,9 @@
         android:fontFamily="@font/quicksand_bold"
         android:layout_below="@+id/organo"
         android:layout_marginStart="10dp"
-        android:textSize="14sp"
+        android:textSize="15sp"
         android:textColor="#000000"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="15dp"/>
     <TextView
         android:id="@+id/current_address"
         android:layout_width="wrap_content"
@@ -160,6 +176,19 @@
         android:layout_marginTop="5dp"
         />
     <TextView
+        android:id="@+id/rs_rs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Rs"
+        android:layout_centerVertical="true"
+        android:textColor="#000000"
+        android:layout_below="@+id/view"
+        android:layout_toLeftOf="@+id/total_bill"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="3dp"
+        />
+    <TextView
+        android:id="@+id/total_bill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -168,5 +197,6 @@
         android:layout_marginEnd="10dp"
         android:layout_marginTop="5dp"
         android:textColor="#000000"
-        android:fontFamily="@font/quicksand_bold"/>
+        android:fontFamily="@font/quicksand_bold"
+        />
 </RelativeLayout>
