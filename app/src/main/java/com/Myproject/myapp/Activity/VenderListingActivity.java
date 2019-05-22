@@ -44,7 +44,7 @@ public class VenderListingActivity extends AppCompatActivity implements View.OnC
 
                     return true;
                 case R.id.navigation_booking:
-replace(new BookingFragment());
+               replace(new BookingFragment());
 
                     return true;
                 case R.id.navigation_acc:
