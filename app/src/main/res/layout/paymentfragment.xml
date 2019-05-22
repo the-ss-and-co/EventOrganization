@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="6dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/back_arrw"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_arrow_back_black_24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment"
+                    android:layout_toRightOf="@+id/back_arrw"
+                    android:layout_centerVertical="true"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/quicksand_bold"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="13dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Bill"
+                android:textSize="18dp"
+                android:fontFamily="@font/quicksand"
+                android:textColor="@color/black"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/rupee_black"
+                    android:layout_marginTop="2dp"
+                    android:layout_gravity="center">
+
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20001"
+                    android:layout_gravity="center"
+                    android:textSize="19dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/quicksand"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Advance Payment"
+                android:textSize="18dp"
+                android:fontFamily="@font/quicksand"
+                android:textColor="@color/black"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/rupee_black"
+                    android:layout_marginTop="2dp"
+                    android:layout_gravity="center">
+
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2000"
+                    android:layout_gravity="center"
+                    android:textSize="19dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/quicksand"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Due Payment"
+                android:textSize="18dp"
+                android:fontFamily="@font/quicksand"
+                android:textColor="@color/black"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/rupee_black"
+                    android:layout_marginTop="2dp"
+                    android:layout_gravity="center">
+
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10000"
+                    android:layout_gravity="center"
+                    android:textSize="19dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/quicksand"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/light_black"></View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Choose Payment option for Due Ammount"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        />
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:divider="?android:attr/dividerHorizontal"
+        android:showDividers="middle"
+
+        android:id="@+id/radioGroup">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credit/Debit Card"
+            android:theme="@style/RadioButtonStyle"
+            android:layout_marginBottom="9dp"
+            android:paddingLeft="7dp"
+            android:id="@+id/radioButton"
+            android:checked="false"
+            android:textSize="20dp"
+            android:fontFamily="@font/quicksand"/>
+
+            <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Net Banking"
+            android:paddingLeft="6dp"
+                android:theme="@style/RadioButtonStyle"
+
+                android:layout_marginBottom="9dp"
+            android:fontFamily="@font/quicksand"
+            android:layout_marginTop="5dp"
+            android:id="@+id/radioButton2"
+            android:checked="false"
+            android:textSize="20dp"
+          />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cash"
+            android:paddingLeft="6dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/radioButton3"
+            android:checked="false"
+            android:theme="@style/RadioButtonStyle"
+
+            android:fontFamily="@font/quicksand"
+            android:textSize="20dp"
+            />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="9dp"
+        android:background="@color/light_black"></View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Through"
+        android:textSize="19dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Credit/Debit Card"
+        android:textSize="18dp"
+        android:fontFamily="@font/quicksand"
+        android:textColor="@color/black"
+        android:layout_marginTop="20sp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/light_black"></View>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Net Banking"
+        android:textSize="18dp"
+        android:fontFamily="@font/quicksand"
+        android:textColor="@color/black"
+        android:layout_marginTop="16sp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/light_black"></View>
+</LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

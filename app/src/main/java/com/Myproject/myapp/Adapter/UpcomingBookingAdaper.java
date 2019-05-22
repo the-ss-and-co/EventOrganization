@@ -18,6 +18,7 @@ import java.util.ArrayList;
 public class UpcomingBookingAdaper extends RecyclerView.Adapter<UpcomingBookingAdaper.ViewHolder> {
     ArrayList<UpcomingModel>arrayList;
 Context context;
+Onclickevent onclickevent;
 
     public UpcomingBookingAdaper(ArrayList<UpcomingModel> arrayList, Context context) {
         this.arrayList = arrayList;
@@ -38,6 +39,9 @@ viewHolder.event_name.setText(arrayList.get(i).getEvent_name());
 viewHolder.service_name.setText(arrayList.get(i).getService_name());
 viewHolder.due_pay.setText(arrayList.get(i).getDue_pay());
 viewHolder.total_pay.setText(arrayList.get(i).getTotal_pay());
+viewHolder.cancel.setOnClickListener(v -> {
+    onclickevent.oncancelclick();
+});
     }
 
     @Override
@@ -60,5 +64,12 @@ viewHolder.total_pay.setText(arrayList.get(i).getTotal_pay());
             rel_call=itemView.findViewById(R.id.rel_call);
             cancel=itemView.findViewById(R.id.cancel);
         }
+    }
+    public interface Onclickevent{
+         void oncancelclick();
+     void oncallclick();
+    }
+    public void onclick(Onclickevent onclickevent){
+   this.onclickevent=onclickevent;
     }
 }

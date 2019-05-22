@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginBottom="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/back_arrw"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel Booking"
+                android:layout_toRightOf="@+id/back_arrw"
+                android:layout_centerVertical="true"
+                android:textSize="21dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/quicksand_bold"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/card1"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="14dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancellation Policies"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:fontFamily="@font/quicksand"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="18sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1."
+                    android:textSize="16dp"/>
+                <TextView
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="if booking cancell before 10 days from the starting service date then 10% will be charged from the total amount and rest amount will refund within 7 working days."/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/light_black">
+
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="12sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2."
+                    android:textSize="16dp"/>
+                <TextView
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="if booking cancell before 10 days from the starting service date then 10% will be charged from the total amount and rest amount will refund within 7 working days."/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/light_black">
+
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="12sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3."
+                    android:textSize="16dp"/>
+                <TextView
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="if booking cancell before 10 days from the starting service date then 10% will be charged from the total amount and rest amount will refund within 7 working days."/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/light_black">
+
+            </View>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Bill"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/quicksand"
+                    android:textColor="@color/lightblank"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="13dp"
+                        android:src="@drawable/rupee_black"
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center">
+
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="200001"
+                        android:layout_gravity="center"
+                        android:textSize="18dp"
+                        android:textColor="@color/lightblank"
+                        android:fontFamily="@font/quicksand"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You Paid"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/quicksand"
+                    android:textColor="@color/lightblank"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="13dp"
+                        android:src="@drawable/rupee_black"
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center">
+
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2001"
+                        android:layout_gravity="center"
+                        android:textSize="18dp"
+                        android:textColor="@color/lightblank"
+                        android:fontFamily="@font/quicksand"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/refundlayout">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Refund Ammount"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/quicksand"
+                        android:textSize="18dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(Policy 2)"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/quicksand"
+                        android:textSize="17dp"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/rupee">
+
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20001"
+                        android:layout_gravity="bottom"
+                        android:textSize="25dp"
+                        android:textColor="@color/red"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginRight="10dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <Button
+                android:layout_width="110dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="22dp"
+                android:background="@color/red"
+                android:text="Confirm"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginBottom="28dp"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

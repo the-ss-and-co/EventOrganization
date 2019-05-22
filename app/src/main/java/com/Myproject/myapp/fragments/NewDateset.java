@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -51,5 +53,36 @@ public class NewDateset extends Fragment  {
         return view;
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Backpressed.setOnClickListener(v ->{
+            replace(new PackageDetailsFragment(),"no");
+        });
+        apply.setOnClickListener(v->{
+            replace(new PackageDetailsFragment(),"yes");
+        });
+    }
+
+    private void replace(Fragment fragment,String type){
+        String backStateName = fragment.getClass().getName();
+        Bundle bundle = null;
+      //  boolean fragmentPopped = getFragmentManager().popBackStackImmediate(backStateName, 0);
+        if(type.equals("yes")) {
+             bundle = new Bundle();
+            bundle.putString("setdate","setdate");
+            fragment.setArguments(bundle);
+
+        }
+
+
+       // if (!fragmentPopped){
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.container_vender_details, fragment);
+            ft.addToBackStack(null);
+            ft.commit();
+       // }
+    }
 
 }
