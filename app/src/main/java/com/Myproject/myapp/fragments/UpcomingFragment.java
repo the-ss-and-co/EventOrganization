@@ -1,15 +1,19 @@
 package com.Myproject.myapp.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.Myproject.myapp.Activity.CancelBookingActivity;
 import com.Myproject.myapp.Adapter.DateAdapter_upcoming;
 import com.Myproject.myapp.Adapter.UpcomingBookingAdaper;
 import com.Myproject.myapp.Model.Date_Model;
@@ -18,7 +22,7 @@ import com.Myproject.myapp.R;
 
 import java.util.ArrayList;
 
-public class UpcomingFragment extends Fragment {
+public class UpcomingFragment extends Fragment implements UpcomingBookingAdaper.Onclickevent {
     RecyclerView recycler_date,recycler_upcminglist;
     ArrayList<Date_Model>arrayList;
     ArrayList<UpcomingModel>upcomingModelArrayList;
@@ -51,6 +55,7 @@ public class UpcomingFragment extends Fragment {
         recycler_date.setAdapter(adapter);
 
         UpcomingBookingAdaper bookingAdaper=new UpcomingBookingAdaper(upcomingModelArrayList,getContext());
+        bookingAdaper.onclick(this);
         recycler_upcminglist.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
 recycler_upcminglist.setAdapter(bookingAdaper);
 
@@ -86,5 +91,27 @@ recycler_upcminglist.setAdapter(bookingAdaper);
         arrayList.add(dateModel2);
         arrayList.add(dateModel3);
 
+    }
+
+    @Override
+    public void oncancelclick(){
+        startActivity(new Intent(getContext(), CancelBookingActivity.class));
+    }
+
+    @Override
+    public void oncallclick() {
+
+    }
+    private void replace(Fragment fg){
+
+     //   String backStateName = fg.getClass().getName();
+       // boolean fragmentPopped = getFragmentManager().popBackStackImmediate(backStateName,0);
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        //if (!fragmentPopped) {
+            ft.replace(R.id.listing_container, fg);
+            ft.addToBackStack(null);
+            ft.commit();
+        //}
     }
 }

@@ -1,6 +1,5 @@
 package com.Myproject.myapp.Activity;
 
-import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -10,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -27,34 +25,32 @@ public class VenderListingActivity extends AppCompatActivity implements View.OnC
     TextView txt_near_me, txt_explore, txt_wish_list, txt_booking, txt_account;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_near:
-                     replace(new VenderLisingFragment());
-                    return true;
-                case R.id.navigation_explore:
+            = item -> {
+                switch (item.getItemId()) {
+                    case R.id.navigation_near:
+                         replace(new VenderLisingFragment());
+                        return true;
+                    case R.id.navigation_explore:
 
 
-                    return true;
-                case R.id.navigation_wish:
+                        return true;
+                    case R.id.navigation_wish:
 
 
-                    return true;
-                case R.id.navigation_booking:
-               replace(new BookingFragment());
 
-                    return true;
-                case R.id.navigation_acc:
+                        return true;
+                    case R.id.navigation_booking:
+    replace(new BookingFragment());
 
 
-                    return true;
-            }
-            return false;
-        }
-    };
+                        return true;
+                    case R.id.navigation_acc:
+
+
+                        return true;
+                }
+                return false;
+            };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

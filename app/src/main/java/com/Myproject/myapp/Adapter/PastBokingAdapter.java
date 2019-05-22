@@ -41,6 +41,10 @@ public class PastBokingAdapter extends RecyclerView.Adapter<PastBokingAdapter.Pa
         pastViewHolder.date.setText(arrayList.get(i).getDate());
         pastViewHolder.event_house.setText(arrayList.get(i).getEvent_name());
         pastViewHolder.event_type.setText(arrayList.get(i).getEvent_type());
+        if(i==1){
+            pastViewHolder.paid.setText("Due");
+            pastViewHolder.paid.setTextColor(context.getResources().getColor(R.color.red));
+        }
         pastViewHolder.goto_boking_details.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,7 +60,7 @@ public class PastBokingAdapter extends RecyclerView.Adapter<PastBokingAdapter.Pa
     }
 
     public class PastViewHolder extends RecyclerView.ViewHolder {
-        TextView festive_calender,date,event_type,event_house;
+        TextView festive_calender,date,event_type,event_house,paid;
         RelativeLayout goto_boking_details;
         public PastViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -64,6 +68,7 @@ public class PastBokingAdapter extends RecyclerView.Adapter<PastBokingAdapter.Pa
             date= itemView.findViewById(R.id.date_festive);
             event_house=itemView.findViewById(R.id.event_house);
             event_type=itemView.findViewById(R.id.event_type);
+            paid=itemView.findViewById(R.id.paid);
             goto_boking_details = itemView.findViewById(R.id.goto_bokingdetails);
         }
     }
