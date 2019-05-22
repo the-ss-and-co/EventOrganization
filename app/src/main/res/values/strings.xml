@@ -54,4 +54,17 @@
     <string name="_3600">\u20B93600</string>
     <string name="paid">Paid</string>
     <string name="rate_now">Rate Now</string>
+    <string name="boking_details">Boking Details</string>
+    <string name="due_amount">Due Amount</string>
+    <string name="_23_000">\u20B923,000</string>
+    <string name="paid_am">PAID</string>
+    <string name="organo_mentor">Organo Mentor</string>
+    <string name="carret_street_kolkata_700107_west_bengal">carret street,kolkata-700107,west-bengal</string>
+    <string name="price_breakup">Price Breakup</string>
+    <string name="total_bill">Total Bill</string>
+    <string name="_36_000">\u20B936,000</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="_23_jan_2018a">23 Jan, 2018</string>
+    <string name="_17_000"> 17,000</string>
+    <string name="Rs">\u20B9</string>
 </resources>

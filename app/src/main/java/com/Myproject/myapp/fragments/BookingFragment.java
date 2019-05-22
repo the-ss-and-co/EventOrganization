@@ -37,7 +37,7 @@ public class BookingFragment extends Fragment  {
         tabLayout.addTab(tabLayout.newTab().setText("Past"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
        final ViewPagerAdapter adapter=new ViewPagerAdapter(getChildFragmentManager(),tabLayout.getTabCount());
-       viewPager.setAdapter(adapter);
+        viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

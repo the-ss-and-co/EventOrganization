@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:layout_marginBottom="5dp">
+    <TextView
+        android:id="@+id/price_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_1"
+        android:fontFamily="@font/quicksand_bold"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"/>
+    <TextView
+        android:id="@+id/rs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Rs"
+        android:layout_toStartOf="@+id/price_per_item"
+        android:layout_centerVertical="true"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:id="@+id/price_per_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_17_000"
+        android:fontFamily="@font/quicksand_bold"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        />
+
+</RelativeLayout>
