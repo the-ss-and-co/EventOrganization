@@ -13,8 +13,8 @@
             android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/back_key"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
                 android:src="@drawable/ic_arrow_back_black_24dp"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
@@ -23,10 +23,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/account"
-                android:textSize="25sp"
+                android:textSize="23sp"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/back_key"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="15dp"
                 android:fontFamily="@font/quicksand_bold"
                 android:textColor="#000000"/>
 
