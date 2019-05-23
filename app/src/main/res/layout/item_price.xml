@@ -9,6 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/item_1"
+        android:textSize="14sp"
         android:fontFamily="@font/quicksand_bold"
         android:layout_centerVertical="true"
         android:layout_marginStart="5dp"/>
@@ -28,6 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/_17_000"
+        android:textSize="14sp"
         android:fontFamily="@font/quicksand_bold"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
