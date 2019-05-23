@@ -17,7 +17,6 @@
             android:textColor="#ffffff"
             android:textSize="13sp"
             android:layout_margin="15dp"
-            android:fontFamily="@string/destination_address"
             />
         <RelativeLayout
             android:layout_marginTop="30dp"
@@ -31,7 +30,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/wednesday"
                 android:textColor="#ffffff"
-                android:fontFamily="@string/destination_address"
                 android:textSize="13sp"
                 />
             <TextView
