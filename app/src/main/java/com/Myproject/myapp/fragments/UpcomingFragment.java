@@ -13,7 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.Myproject.myapp.Activity.CancelBookingActivity;
+import com.Myproject.myapp.Activity.UpcomingdetailsActivity;
 import com.Myproject.myapp.Adapter.DateAdapter_upcoming;
 import com.Myproject.myapp.Adapter.UpcomingBookingAdaper;
 import com.Myproject.myapp.Model.Date_Model;
@@ -95,13 +95,23 @@ recycler_upcminglist.setAdapter(bookingAdaper);
 
     @Override
     public void oncancelclick(){
-        startActivity(new Intent(getContext(), CancelBookingActivity.class));
+        Intent intent=new Intent(getContext(), UpcomingdetailsActivity.class);
+        intent.putExtra("cancel","cancel");
+        startActivity(intent);
     }
 
     @Override
     public void oncallclick() {
 
     }
+
+    @Override
+    public void onlinclick() {
+        Intent intent=new Intent(getContext(), UpcomingdetailsActivity.class);
+        intent.putExtra("details","");
+        startActivity(intent);
+    }
+
     private void replace(Fragment fg){
 
      //   String backStateName = fg.getClass().getName();

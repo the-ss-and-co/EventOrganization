@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -42,6 +43,10 @@ viewHolder.total_pay.setText(arrayList.get(i).getTotal_pay());
 viewHolder.cancel.setOnClickListener(v -> {
     onclickevent.oncancelclick();
 });
+viewHolder.lin_lin.setOnClickListener(v -> {
+    onclickevent.onlinclick();
+});
+
     }
 
     @Override
@@ -50,11 +55,13 @@ viewHolder.cancel.setOnClickListener(v -> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        LinearLayout lin_lin;
         TextView vender_name,service_name,event_name,total_pay,due_pay;
         RelativeLayout rel_due_pay,rel_call;
         Button cancel;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            lin_lin=itemView.findViewById(R.id.lin_lin);
             vender_name=itemView.findViewById(R.id.vender_name);
             service_name=itemView.findViewById(R.id.service_name);
             event_name=itemView.findViewById(R.id.event_name);
@@ -68,6 +75,7 @@ viewHolder.cancel.setOnClickListener(v -> {
     public interface Onclickevent{
          void oncancelclick();
      void oncallclick();
+     void onlinclick();
     }
     public void onclick(Onclickevent onclickevent){
    this.onclickevent=onclickevent;

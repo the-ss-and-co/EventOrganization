@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="150dp"
-    android:layout_height="120dp"
+    android:layout_width="130dp"
+    android:layout_height="105dp"
     android:layout_marginEnd="5dp"
     >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/red">
+
         <TextView
             android:id="@+id/item1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/quicksand"
             android:text="@string/item_1"
-            android:textColor="#ffffff"
-            android:textSize="13sp"
-            android:layout_margin="15dp"
-            android:fontFamily="@string/destination_address"
-            />
+            android:textColor="@color/white"
+            android:textSize="15sp" />
         <RelativeLayout
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_below="@+id/item1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,8 +32,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/wednesday"
                 android:textColor="#ffffff"
-                android:fontFamily="@string/destination_address"
-                android:textSize="13sp"
+
+android:fontFamily="@font/quicksand"                android:textSize="15sp"
                 />
             <TextView
                 android:id="@+id/day_of_date"
@@ -40,7 +41,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_23_jan_2018a"
-                android:textSize="13sp"
+                android:textSize="14sp"
+                android:fontFamily="@font/quicksand"
                 android:textColor="#ffffff"
                 />
 
