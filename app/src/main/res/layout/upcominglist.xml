@@ -10,181 +10,188 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_margin="12dp">
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/vender_name"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/lin_lin">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Festive Calender"
-                    android:fontFamily="@font/quicksand"
-                    android:textSize="18dp"
-                    android:textColor="@color/black"
-                    />
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/vender_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Festive Calender"
+                        android:fontFamily="@font/quicksand"
+                        android:textSize="18dp"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:id="@+id/service_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Festive Calender"
+                        android:fontFamily="@font/quicksand"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
                 <TextView
-                    android:id="@+id/service_name"
+                    android:id="@+id/event_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Festive Calender"
+                    android:text="Funaler"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/red"
+                    android:textSize="17dp"
                     android:fontFamily="@font/quicksand"
-                    android:textSize="15dp"
-                    android:textColor="@color/black"
                     />
-            </LinearLayout>
-            <TextView
-                android:id="@+id/event_name"
-                android:layout_width="wrap_content"
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_black"
+                android:layout_marginTop="8dp">
+            </View>
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Funaler"
-                android:layout_alignParentRight="true"
-                android:textColor="@color/red"
-                android:textSize="17dp"
-                android:fontFamily="@font/quicksand"
-                />
-        </RelativeLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/light_black"
-            android:layout_marginTop="8dp">
-        </View>
-       <RelativeLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="8dp">
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="Total Payment"
-android:fontFamily="@font/quicksand"
-               android:textColor="@color/black"
-               android:textSize="15dp"/>
-           <LinearLayout
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_alignParentRight="true"
-               android:layout_centerInParent="true">
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Payment"
+                    android:fontFamily="@font/quicksand"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true">
 
-               <ImageView
-                   android:layout_width="11dp"
-                   android:layout_height="13dp"
-                   android:layout_gravity="center"
-                   android:layout_marginTop="2dp"
-                   android:backgroundTint="@color/black"
-                   android:src="@drawable/rupee_black" />
-               <TextView
-                   android:id="@+id/total_pay"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                    android:text="36000"
-                   android:textSize="16dp"
-                   android:fontFamily="@font/quicksand"
-                   android:gravity="center"
-                   android:textColor="@color/black"/>
-           </LinearLayout>
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_height="13dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:backgroundTint="@color/black"
+                        android:src="@drawable/rupee_black" />
+                    <TextView
+                        android:id="@+id/total_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="36000"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/quicksand"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
 
-       </RelativeLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/light_black"
-            android:layout_marginTop="8dp">
-        </View>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_black"
+                android:layout_marginTop="8dp">
+            </View>
 
-        <RelativeLayout
-            android:id="@+id/rel_due_pay"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:id="@+id/rel_due_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Due"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/quicksand"/>
+                    <LinearLayout
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/anvd">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cash"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:textColor="@color/white"
+
+                            android:fontFamily="@font/quicksand_bold"/>
+                        <ImageView
+                            android:layout_marginTop="1dp"
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:src="@drawable/down_arrow"
+                            android:layout_marginRight="3dp"
+                            android:backgroundTint="@color/white"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true">
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="13dp"
+                        android:src="@drawable/rupee_black"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/black"
+                        android:layout_marginTop="2dp"/>
+                    <TextView
+                        android:id="@+id/due_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="36000"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/quicksand"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_black"
+                android:layout_marginTop="8dp">
+            </View>
+            <RelativeLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Due"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:fontFamily="@font/quicksand"/>
-                <LinearLayout
-                    android:layout_marginLeft="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/anvd">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Cash"
-    android:layout_gravity="center"
-    android:gravity="center"
-    android:padding="3dp"
-    android:textColor="@color/white"
-
-    android:fontFamily="@font/quicksand_bold"/>
-                    <ImageView
-                        android:layout_marginTop="1dp"
-                        android:layout_width="9dp"
-                        android:layout_height="9dp"
-                        android:src="@drawable/down_arrow"
-                        android:layout_marginRight="3dp"
-                        android:backgroundTint="@color/white"
-                        android:layout_gravity="center"/>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerInParent="true">
-                <ImageView
-                    android:layout_width="12dp"
-                    android:layout_height="13dp"
-                    android:src="@drawable/rupee_black"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/black"
-                    android:layout_marginTop="2dp"/>
-                <TextView
-                    android:id="@+id/due_pay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="36000"
-                    android:textSize="16dp"
+                    android:text="Secret Code"
                     android:fontFamily="@font/quicksand"
-                    android:gravity="center"
+                    android:textSize="15sp"
                     android:textColor="@color/black"/>
-            </LinearLayout>
-        </RelativeLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/light_black"
-            android:layout_marginTop="8dp">
-        </View>
-        <RelativeLayout
-            android:layout_marginTop="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Secret Code"
-                android:fontFamily="@font/quicksand"
-                android:textSize="15sp"
-                android:textColor="@color/black"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="* * * *"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:layout_alignParentRight="true"/>
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="* * * *"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
