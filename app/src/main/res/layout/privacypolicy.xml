@@ -34,10 +34,11 @@
         android:layout_below="@+id/tab_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="20dp"
+       android:layout_margin="15dp"
         android:text="@string/lorem_ipsum_is_simply_dummy_text_of_the_printing_n_and_typesetting_industry_lorem_ipsum_has_been_the_n_industry_s_standard_dummy_text_ever_since_the_1500s_n_whne_an_unknown_printer_took_a_gallery_of_type_and_n_scrambled_it_to_make_a_type_specimen_book"
-        android:textSize="14sp"
+        android:textSize="18sp"
+        android:fontFamily="@font/quicksand"
+        android:textStyle="bold"
         android:textColor="#000000"
         />
 </RelativeLayout>

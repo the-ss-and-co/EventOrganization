@@ -72,7 +72,7 @@ public class BillsItemAdapter extends RecyclerView.Adapter<BillsItemAdapter.View
         FragmentManager fm = ((FragmentActivity)context).getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         if (!fragmentPopped) {
-            ft.replace(R.id.listing_container, fragment);
+            ft.replace(R.id.account_contaner, fragment);
             ft.addToBackStack(null);
             ft.commit();
         }

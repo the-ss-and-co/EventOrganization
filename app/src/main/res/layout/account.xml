@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <android.support.v7.widget.CardView
@@ -44,19 +45,23 @@
 
     <TextView
         android:id="@+id/bills"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/bills"
+        android:fontFamily="@font/quicksand"
+        android:textStyle="bold"
         android:textColor="#000000"
         android:textSize="20sp"
         />
         <TextView
             android:id="@+id/profile"
             android:layout_below="@+id/bills"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/profile"
             android:textSize="20sp"
+            android:fontFamily="@font/quicksand"
+            android:textStyle="bold"
             android:textColor="#000000"
             android:layout_marginTop="20dp"/>
         <View
@@ -71,11 +76,13 @@
         <TextView
             android:id="@+id/partner"
             android:layout_below="@+id/view"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/be_our_partner"
             android:textColor="#000000"
             android:textSize="20sp"
+            android:fontFamily="@font/quicksand"
+            android:textStyle="bold"
             android:layout_marginTop="10dp"
             />
         <View
@@ -89,9 +96,11 @@
         <TextView
             android:id="@+id/help"
             android:layout_below="@+id/view2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
+            android:fontFamily="@font/quicksand"
+            android:textStyle="bold"
             android:text="@string/help"
             android:textColor="#000000"
             android:layout_marginTop="10dp"
@@ -99,14 +108,51 @@
         <TextView
             android:id="@+id/privacy_policy"
             android:layout_below="@+id/help"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/privacy_policy"
             android:textColor="#000000"
             android:textSize="20sp"
+            android:fontFamily="@font/quicksand"
+            android:textStyle="bold"
             android:layout_marginTop="20dp"
             />
-
+        <TextView
+            android:id="@+id/tandc"
+            android:layout_below="@+id/privacy_policy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="T&amp;C"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:fontFamily="@font/quicksand"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            />
+        <TextView
+            android:id="@+id/refercode"
+            android:layout_below="@+id/tandc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generate Refferal Code"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:fontFamily="@font/quicksand"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            />
+        <TextView
+            android:id="@+id/logout"
+            android:layout_below="@+id/refercode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:fontFamily="@font/quicksand"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            />
 
     </RelativeLayout>
 

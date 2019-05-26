@@ -19,6 +19,7 @@ import com.Myproject.myapp.R;
 import com.Myproject.myapp.fragments.Account;
 import com.Myproject.myapp.fragments.BookingFragment;
 import com.Myproject.myapp.fragments.VenderLisingFragment;
+import com.Myproject.myapp.fragments.WishListFragment;
 
 public class VenderListingActivity extends AppCompatActivity implements View.OnClickListener {
     LinearLayout lin_near_me, lin_explore, lin_wish_list, lin_booking, lin_account;
@@ -37,7 +38,7 @@ public class VenderListingActivity extends AppCompatActivity implements View.OnC
                         return true;
                     case R.id.navigation_wish:
 
-
+replace(new WishListFragment());
 
                         return true;
                     case R.id.navigation_booking:
@@ -55,7 +56,7 @@ public class VenderListingActivity extends AppCompatActivity implements View.OnC
             };
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vender_listing);
         FragmentManager fm = getSupportFragmentManager();
@@ -98,7 +99,7 @@ public class VenderListingActivity extends AppCompatActivity implements View.OnC
 
     }
 
-    private void replace(Fragment fragment) {
+    private void replace(Fragment fragment){
         String backStateName = fragment.getClass().getName();
         boolean fragmentPopped = getSupportFragmentManager().popBackStackImmediate(backStateName, 0);
         FragmentManager fm = getSupportFragmentManager();

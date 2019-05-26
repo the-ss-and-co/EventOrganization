@@ -10,6 +10,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/item_1"
+        android:textColor="@color/black"
+        android:fontFamily="@font/quicksand"
+        android:textStyle="bold"
         android:textSize="17sp"/>
     <TextView
         android:id="@+id/date"
@@ -18,6 +21,7 @@
         android:layout_height="wrap_content"
         android:text="Jan 23 2019"
         android:textSize="15sp"
+        android:layout_marginTop="2dp"
         android:textColor="@color/red"
         android:fontFamily="@font/quicksand_bold"/>
     <TextView
@@ -25,6 +29,7 @@
         android:layout_height="wrap_content"
         android:text="@string/Rs"
         android:textSize="17sp"
+        android:textColor="@color/black"
         android:layout_marginEnd="5dp"
         android:layout_toStartOf="@+id/single_amount"/>
     <TextView
