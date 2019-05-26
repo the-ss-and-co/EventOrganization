@@ -55,13 +55,11 @@
     <string name="paid">Paid</string>
     <string name="rate_now">Rate Now</string>
     <string name="boking_details">Boking Details</string>
-    <string name="due_amount">Due Amount</string>
     <string name="_23_000">23,000</string>
     <string name="paid_am">PAID</string>
     <string name="organo_mentor">Organo Mentor</string>
     <string name="carret_street_kolkata_700107_west_bengal">carret street,kolkata-700107,west-bengal</string>
     <string name="price_breakup">Price Breakup</string>
-    <string name="total_bill">Total Bill</string>
     <string name="_36_000">36,000</string>
     <string name="wednesday">Wednesday</string>
     <string name="_23_jan_2018a">23 Jan, 2018</string>
@@ -73,4 +71,21 @@
     <string name="be_our_partner">Be Our Partner</string>
     <string name="help">Help</string>
     <string name="privacy_policy">Privacy Policy</string>
+    <string name="vender_name">Vendor Name</string>
+    <string name="booked_for_5_days">Booked For 5 Days</string>
+    <string name="funeral">Funeral</string>
+    <string name="book_again">Book Again</string>
+    <string name="_50_000">50,000</string>
+    <string name="event_small">Event</string>
+    <string name="mr">Mr.</string>
+    <string name="pritam_roy">Pritam Roy</string>
+    <string name="package_details">Package Details</string>
+    <string name="total_bill">Total Bill</string>
+    <string name="due_amount">Due Amount</string>
+    <string name="_23_999">23,999</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="paid_caps">PAID</string>
+    <string name="do_you_have_any_query">Do you have any query</string>
+    <string name="send_caps">SEND</string>
+    <string name="lorem_ipsum_is_simply_dummy_text_of_the_printing_n_and_typesetting_industry_lorem_ipsum_has_been_the_n_industry_s_standard_dummy_text_ever_since_the_1500s_n_whne_an_unknown_printer_took_a_gallery_of_type_and_n_scrambled_it_to_make_a_type_specimen_book">Lorem Ipsum is simply dummy text of the printing  and typesetting industry. lorem ipsum has been the  industry\'s standard dummy text ever since the 1500s,  whne an unknown printer took a gallery of type and  scrambled it to make a type specimen book.</string>
 </resources>
