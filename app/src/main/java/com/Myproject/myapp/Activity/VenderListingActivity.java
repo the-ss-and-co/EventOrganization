@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.Myproject.myapp.R;
+import com.Myproject.myapp.fragments.Account;
 import com.Myproject.myapp.fragments.BookingFragment;
 import com.Myproject.myapp.fragments.VenderLisingFragment;
 
@@ -45,6 +46,7 @@ public class VenderListingActivity extends AppCompatActivity implements View.OnC
 
                         return true;
                     case R.id.navigation_acc:
+                        replace(new Account());
 
 
                         return true;

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_tab"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="1dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/back_key"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/todo" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account"
+                android:textSize="23sp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/back_key"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="#000000"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_tab"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        >
+
+    <TextView
+        android:id="@+id/bills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bills"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        />
+        <TextView
+            android:id="@+id/profile"
+            android:layout_below="@+id/bills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_marginTop="20dp"/>
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/profile"
+            android:background="@color/light_black"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/partner"
+            android:layout_below="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/be_our_partner"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            />
+        <View
+            android:id="@+id/view2"
+            android:layout_below="@+id/partner"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_black"
+            android:layout_marginTop="10dp"
+            />
+        <TextView
+            android:id="@+id/help"
+            android:layout_below="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/help"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            />
+        <TextView
+            android:id="@+id/privacy_policy"
+            android:layout_below="@+id/help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/privacy_policy"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
