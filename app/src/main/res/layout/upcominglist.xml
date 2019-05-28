@@ -5,70 +5,116 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="10dp"
     app:cardCornerRadius="6dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="12dp">
+        android:layout_margin="12dp"
+        android:orientation="vertical">
+
         <LinearLayout
+            android:id="@+id/lin_lin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/lin_lin">
-            <RelativeLayout
-                android:layout_width="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/vender_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Festive Calender"
-                        android:fontFamily="@font/quicksand"
-                        android:textSize="18dp"
-                        android:textColor="@color/black"
-                        />
-                    <TextView
-                        android:id="@+id/service_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Festive Calender"
-                        android:fontFamily="@font/quicksand"
-                        android:textSize="15dp"
-                        android:textColor="@color/black"
-                        />
-                </LinearLayout>
                 <TextView
-                    android:id="@+id/event_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Funaler"
-                    android:layout_alignParentRight="true"
-                    android:textColor="@color/red"
-                    android:textSize="17dp"
+                    android:text="BOOKING ID : "
                     android:fontFamily="@font/quicksand"
-                    />
-            </RelativeLayout>
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OWNDHFTW"
+                    android:fontFamily="@font/quicksand"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/light_black"
-                android:layout_marginTop="8dp">
-            </View>
+                android:layout_marginTop="8dp"
+                android:background="@color/light_black"></View>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp">
-                <TextView
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Total Payment"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/vender_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand"
+                        android:text="Festive Calender"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/service_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand"
+                        android:text="Festive Calender"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/event_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
                     android:fontFamily="@font/quicksand"
+                    android:text="Funaler"
+                    android:textColor="@color/red"
+                    android:textSize="17dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/light_black"></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand"
+                    android:text="Total Payment"
                     android:textColor="@color/black"
-                    android:textSize="15dp"/>
+                    android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/txt_paid"
+                    android:layout_below="@+id/total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paid"
+                    android:fontFamily="@font/quicksand"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@color/green"
+                    android:layout_marginTop="4dp"
+                    android:padding="4dp"/>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -82,127 +128,156 @@
                         android:layout_marginTop="2dp"
                         android:backgroundTint="@color/black"
                         android:src="@drawable/rupee_black" />
+
                     <TextView
                         android:id="@+id/total_pay"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="36000"
-                        android:textSize="16dp"
                         android:fontFamily="@font/quicksand"
                         android:gravity="center"
-                        android:textColor="@color/black"/>
+                        android:text="36000"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
                 </LinearLayout>
 
             </RelativeLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/light_black"
-                android:layout_marginTop="8dp">
-            </View>
+                android:layout_marginTop="8dp"
+                android:background="@color/light_black"></View>
 
             <RelativeLayout
                 android:id="@+id/rel_due_pay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+
+
+
                     <TextView
-                        android:layout_gravity="center"
+                        android:id="@+id/txt_due"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/quicksand"
                         android:text="Due"
                         android:textColor="@color/black"
-                        android:textSize="15sp"
-                        android:fontFamily="@font/quicksand"/>
+                        android:textSize="15sp" />
+
                     <LinearLayout
-                        android:layout_marginLeft="5dp"
+                        android:id="@+id/lll"
+                        android:layout_below="@+id/txt_due"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
                         android:background="@drawable/anvd">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Cash"
                             android:layout_gravity="center"
+                            android:fontFamily="@font/quicksand_bold"
                             android:gravity="center"
                             android:padding="3dp"
-                            android:textColor="@color/white"
+                            android:text="Cash"
 
-                            android:fontFamily="@font/quicksand_bold"/>
+                            android:textColor="@color/white" />
+
                         <ImageView
-                            android:layout_marginTop="1dp"
                             android:layout_width="9dp"
                             android:layout_height="9dp"
-                            android:src="@drawable/down_arrow"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="1dp"
                             android:layout_marginRight="3dp"
                             android:backgroundTint="@color/white"
-                            android:layout_gravity="center"/>
+                            android:src="@drawable/down_arrow" />
                     </LinearLayout>
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/paynow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pay Now"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginTop="2dp"
+                    android:padding="4dp"
+                    android:layout_marginLeft="7dp"
+                    android:background="@drawable/squershape"
+                    android:layout_below="@+id/txt_due"
+                    android:layout_toRightOf="@+id/lll"
+                    />
+
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_centerInParent="true">
+                    >
+
                     <ImageView
                         android:layout_width="12dp"
                         android:layout_height="13dp"
-                        android:src="@drawable/rupee_black"
                         android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
                         android:backgroundTint="@color/black"
-                        android:layout_marginTop="2dp"/>
+                        android:src="@drawable/rupee_black" />
+
                     <TextView
                         android:id="@+id/due_pay"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="36000"
-                        android:textSize="16dp"
                         android:fontFamily="@font/quicksand"
                         android:gravity="center"
-                        android:textColor="@color/black"/>
+                        android:text="36000"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
                 </LinearLayout>
             </RelativeLayout>
+
             <View
+                android:id="@+id/vv"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/light_black"
-                android:layout_marginTop="8dp">
-            </View>
-            <RelativeLayout
                 android:layout_marginTop="8dp"
+                android:background="@color/light_black"></View>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Secret Code"
                     android:fontFamily="@font/quicksand"
-                    android:textSize="15sp"
-                    android:textColor="@color/black"/>
+                    android:text="Secret Code"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
                     android:text="* * * *"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:layout_alignParentRight="true"/>
+                    android:textSize="16sp" />
             </RelativeLayout>
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/light_black"
-            android:layout_marginTop="8dp">
-        </View>
+            android:layout_marginTop="8dp"
+            android:background="@color/light_black"></View>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:weightSum="2"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8dp"
+            android:weightSum="2">
+
             <Button
                 android:id="@+id/cancel"
                 android:layout_width="0dp"
@@ -210,18 +285,20 @@
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:text="CAncel"
-                android:textColor="#999"/>
+                android:textColor="#999" />
+
             <RelativeLayout
                 android:id="@+id/rel_call"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#f5f5f5">
+
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/call_black"
-                    android:layout_centerInParent="true"/>
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/call_black" />
             </RelativeLayout>
 
         </LinearLayout>

@@ -28,6 +28,8 @@ public class PastBookingFragment extends Fragment {
         arrayList = new ArrayList<>();
         arrayList.add(new PastDataModel("Festive Calender","26 JAN 2018","Marriage","Event House"));
         arrayList.add(new PastDataModel("Festive Calender","26 JAN 2018","Marriage","Event House"));
+        arrayList.add(new PastDataModel("Festive Calender","26 JAN 2018","Marriage","Event House"));
+
 
         PastBokingAdapter bookingAdaper=new PastBokingAdapter(getContext(),arrayList);
         festive_calender.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));

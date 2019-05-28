@@ -10,12 +10,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.Myproject.myapp.Model.PastDataModel;
 import com.Myproject.myapp.R;
-import com.Myproject.myapp.fragments.BokingDetails;
+import com.Myproject.myapp.fragments.PastBookingDetails;
 
 import java.util.ArrayList;
 
@@ -42,13 +43,17 @@ public class PastBokingAdapter extends RecyclerView.Adapter<PastBokingAdapter.Pa
         pastViewHolder.event_house.setText(arrayList.get(i).getEvent_name());
         pastViewHolder.event_type.setText(arrayList.get(i).getEvent_type());
         if(i==1){
-            pastViewHolder.paid.setText("Due");
-            pastViewHolder.paid.setTextColor(context.getResources().getColor(R.color.red));
+         pastViewHolder.rel_due_pay.setVisibility(View.GONE);
+         pastViewHolder.vv.setVisibility(View.GONE);
+         pastViewHolder.rating.setVisibility(View.GONE);
+         pastViewHolder.txtnow.setVisibility(View.VISIBLE);
+        }else {
+            pastViewHolder.paid.setVisibility(View.GONE);
         }
         pastViewHolder.goto_boking_details.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                replace(new BokingDetails());
+                replace(new PastBookingDetails());
             }
         });
 
@@ -60,15 +65,21 @@ public class PastBokingAdapter extends RecyclerView.Adapter<PastBokingAdapter.Pa
     }
 
     public class PastViewHolder extends RecyclerView.ViewHolder {
-        TextView festive_calender,date,event_type,event_house,paid;
-        RelativeLayout goto_boking_details;
+        TextView festive_calender,date,event_type,event_house,paid,txtnow;
+        RelativeLayout goto_boking_details,rel_due_pay;
+        RatingBar rating;
+        View vv;
         public PastViewHolder(@NonNull View itemView) {
             super(itemView);
+            vv=itemView.findViewById(R.id.vv);
+            rating=itemView.findViewById(R.id.rating);
+            txtnow=itemView.findViewById(R.id.txtnow);
             festive_calender= itemView.findViewById(R.id.festive_calender);
             date= itemView.findViewById(R.id.date_festive);
             event_house=itemView.findViewById(R.id.event_house);
             event_type=itemView.findViewById(R.id.event_type);
             paid=itemView.findViewById(R.id.paid);
+            rel_due_pay=itemView.findViewById(R.id.rel_due_pay);
             goto_boking_details = itemView.findViewById(R.id.goto_bokingdetails);
         }
     }

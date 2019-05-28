@@ -62,9 +62,11 @@ recycler_upcminglist.setAdapter(bookingAdaper);
     }
 
     private void addlistdata(ArrayList<UpcomingModel> upcomingModelArrayList) {
-        upcomingModelArrayList.add(new UpcomingModel("FEstive Calender","Photographer",
+        upcomingModelArrayList.add(new UpcomingModel("Fstive Calender","Photographer",
                 "Merrage","20000","5000","****"));
-        upcomingModelArrayList.add(new UpcomingModel("FEstive Calender","Photographer",
+        upcomingModelArrayList.add(new UpcomingModel("Festive Calender","Photographer",
+                "Merrage","20000","5000","****"));
+        upcomingModelArrayList.add(new UpcomingModel("Festive Calender","Photographer",
                 "Merrage","20000","5000","****"));
     }
 

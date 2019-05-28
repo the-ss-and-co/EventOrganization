@@ -18,7 +18,7 @@ import com.Myproject.myapp.R;
 
 import java.util.ArrayList;
 
-public class BokingDetails extends Fragment {
+public class PastBookingDetails extends Fragment {
     RecyclerView ItemRecycleview,PriceRecylerView;
 
     BokingItemAdapter bokingItemAdapter;

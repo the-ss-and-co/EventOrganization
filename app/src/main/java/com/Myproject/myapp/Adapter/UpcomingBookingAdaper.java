@@ -35,6 +35,12 @@ return new ViewHolder(view);
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+        if(i==2){
+      viewHolder.rel_due_pay.setVisibility(View.GONE);
+      viewHolder.vv.setVisibility(View.GONE);
+        }else {
+            viewHolder.txt_paid.setVisibility(View.GONE);
+        }
 viewHolder.vender_name.setText(arrayList.get(i).getName());
 viewHolder.event_name.setText(arrayList.get(i).getEvent_name());
 viewHolder.service_name.setText(arrayList.get(i).getService_name());
@@ -56,11 +62,14 @@ viewHolder.lin_lin.setOnClickListener(v -> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         LinearLayout lin_lin;
-        TextView vender_name,service_name,event_name,total_pay,due_pay;
+        TextView vender_name,service_name,event_name,total_pay,due_pay,txt_paid;
         RelativeLayout rel_due_pay,rel_call;
         Button cancel;
+        View vv;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            txt_paid=itemView.findViewById(R.id.txt_paid);
+            vv=itemView.findViewById(R.id.vv);
             lin_lin=itemView.findViewById(R.id.lin_lin);
             vender_name=itemView.findViewById(R.id.vender_name);
             service_name=itemView.findViewById(R.id.service_name);

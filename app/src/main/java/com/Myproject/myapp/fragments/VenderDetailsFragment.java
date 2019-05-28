@@ -61,7 +61,7 @@ Button btn_explore_package;
 adddata(arrayList);
 
 
-        adddata(arrayList);
+
         String s="Destance Between  destinitation and  vender is above ";
         String next = "<font color='#000'>30KM</font>";
        String e= "Vender Charge extra on disdance above ";
