@@ -15,7 +15,8 @@
         android:layout_marginTop="15dp"
         android:layout_marginLeft="30dp"
         android:textColor="@color/red"
-        android:textSize="12dp"
+        android:textSize="8dp"
+        android:textStyle="bold"
         android:text="SET SERVICE LOCATION">
 
     </TextView>
@@ -27,7 +28,6 @@
         android:fontFamily="@font/quicksand"
         android:layout_centerHorizontal="true"
         android:dropDownWidth="match_parent"
-        android:layout_margin="6dp"
         android:drawablePadding="14dp"
 
         android:drawableLeft="@drawable/left_arr"
@@ -53,8 +53,7 @@ android:id="@+id/location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Current Locaton"
-            android:textSize="17dp"
-
+            android:textSize="14dp"
             android:fontFamily="@font/quicksand_bold"
             android:layout_marginLeft="15dp"
             android:textColor="#000"
@@ -63,15 +62,50 @@ android:id="@+id/location"
     </LinearLayout>
 
 
-    <Button
+
+    <RelativeLayout
         android:id="@+id/btn_save"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
-        android:background="@drawable/buttonsave"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/location"
-        android:layout_marginTop="68dp"
-        android:fontFamily="@font/quicksand_bold"
-        android:textColor="#fff"
-        android:text="confirm" />
+        android:layout_marginTop="85dp"
+        android:background="@drawable/rcr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm"
+            android:textColor="@color/white"
+            android:paddingTop="8dp"
+            android:textSize="17dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:paddingBottom="8dp"
+            android:paddingRight="13dp"
+            android:paddingLeft="13dp"
+
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="powered by"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="25dp"
+            android:src="@drawable/google"
+            android:layout_marginLeft="4dp"
+            />
+    </LinearLayout>
+
+
 </RelativeLayout>

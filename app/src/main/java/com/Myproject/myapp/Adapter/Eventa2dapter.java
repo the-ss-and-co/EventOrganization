@@ -17,6 +17,7 @@ import java.util.ArrayList;
 public class Eventa2dapter extends RecyclerView.Adapter<Eventa2dapter.ViewHolder> {
     ArrayList<EventModel> arrayList;
     Context context;
+    int i=0;
 
     public Eventa2dapter(ArrayList<EventModel> arrayList, Context context) {
         this.arrayList = arrayList;
@@ -40,7 +41,17 @@ public class Eventa2dapter extends RecyclerView.Adapter<Eventa2dapter.ViewHolder
             viewHolder.r2.setBackgroundColor(context.getResources().getColor(R.color.light_black));
         }
         viewHolder.txt_event_name.setText(arrayList.get(i).getEventText());
-
+viewHolder.rel_event.setOnClickListener(v -> {
+    this.i=i;
+    notifyDataSetChanged();
+});
+if(this.i==i){
+    viewHolder.r1.setBackgroundColor(context.getResources().getColor(R.color.green));
+    viewHolder.r2.setBackgroundColor(context.getResources().getColor(R.color.light_green));
+}else {
+    viewHolder.r1.setBackgroundColor(context.getResources().getColor(R.color.unchacked));
+    viewHolder.r2.setBackgroundColor(context.getResources().getColor(R.color.light_black));
+}
     }
 
     @Override
@@ -49,13 +60,15 @@ public class Eventa2dapter extends RecyclerView.Adapter<Eventa2dapter.ViewHolder
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        RelativeLayout r1,r2;
+        RelativeLayout r1,r2,rel_event;
         TextView txt_event_name;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             r1=itemView.findViewById(R.id.r1);
             r2=itemView.findViewById(R.id.r2);
             txt_event_name=itemView.findViewById(R.id.txt_event_name);
+            rel_event=itemView.findViewById(R.id.rel_event);
+
 
         }
     }

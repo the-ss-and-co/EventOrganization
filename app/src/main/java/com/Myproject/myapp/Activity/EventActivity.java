@@ -31,12 +31,14 @@ public class EventActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
         EventView = findViewById(R.id.eventview);
-        Evenetinput = findViewById(R.id.Eventinput);
-        Go = findViewById(R.id.Go);
+
         arrayList = new ArrayList<>();
-        arrayList.add(new EventModel("Event 1",R.drawable.ic_event_black_24dp,true));
-        arrayList.add(new EventModel("Event 2",R.drawable.ic_event_black_24dp,true));
-        arrayList.add(new EventModel("Event 3",R.drawable.ic_event_black_24dp,true));
+        arrayList.add(new EventModel("Marriage",R.drawable.ic_event_black_24dp,true));
+        arrayList.add(new EventModel("Anniversary",R.drawable.ic_event_black_24dp,true));
+        arrayList.add(new EventModel("Birthday",R.drawable.ic_event_black_24dp,true));
+        arrayList.add(new EventModel("Corporate",R.drawable.ic_event_black_24dp,true));
+        arrayList.add(new EventModel("Funeral",R.drawable.ic_event_black_24dp,true));
+
         eventView();
   
 

@@ -14,12 +14,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 
 import com.Myproject.myapp.Activity.ServiceActivity;
 import com.Myproject.myapp.R;
 
 public class LoginFragment extends Fragment {
-    Button btn_next;
+    RelativeLayout btn_next;
     EditText edt_phone,edt_name;
     TextInputLayout edt_phone_main,edt_name_main;
 

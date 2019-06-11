@@ -43,7 +43,6 @@ TextView textView;
 
         dialog.getDatePicker().setMinDate(c.getTime().getTime());
         c.add(Calendar.DATE,30);
-        dialog.getDatePicker().setMaxDate(c.getTimeInMillis());
         return dialog;
     }
 

@@ -12,7 +12,7 @@
         android:text="@string/choose_an_event"
         android:fontFamily="@font/quicksand_bold"
         android:textColor="#000000"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         />
@@ -36,64 +36,9 @@
 
     </ScrollView>
 
-    <TextView
-        android:id="@+id/txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/others"
-        android:fontFamily="@font/quicksand_bold"
-        android:textSize="22sp"
-        android:textColor="#000"
-        android:layout_marginStart="25dp"
-        android:layout_below="@+id/eventitem"
-        android:layout_marginTop="22dp"
-        />
-    <RelativeLayout
-        android:layout_marginTop="6dp"
-        android:layout_below="@+id/txt"
-        android:id="@+id/otherevent"
-        android:layout_width="match_parent"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_height="50dp"
-        >
-        <RelativeLayout
-            android:id="@+id/eventtag"
-            android:layout_width="80dp"
-            android:layout_height="45dp"
-            android:background="@drawable/buttonsave"
-            android:layout_alignParentEnd="true">
-            <TextView
-                android:id="@+id/Go"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/go"
-                android:layout_centerInParent="true"
-                android:textSize="20sp"
-                android:textColor="#ffffff"
-                android:textStyle="bold"/>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_toStartOf="@+id/eventtag"
-
-            >
-            <EditText
-                android:id="@+id/Eventinput"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/event"
-                android:paddingStart="10dp"
-                android:singleLine="true"
-                android:background="@drawable/edittextback"
-                tools:ignore="RtlSymmetry"
-                android:autofillHints="@string/event" />
-        </RelativeLayout>
 
 
 
     </RelativeLayout>
 
 
-</RelativeLayout>

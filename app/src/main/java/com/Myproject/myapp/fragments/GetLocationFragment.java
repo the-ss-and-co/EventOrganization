@@ -24,6 +24,7 @@ import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -57,7 +58,7 @@ public class GetLocationFragment extends Fragment implements
     private GoogleApiClient mGoogleApiClient;
     public static final LatLngBounds BOUNDS_INDIA = new LatLngBounds(new LatLng(7.798000, 68.14712), new LatLng(37.090000, 97.34466));
     TextView getlocation;
-    Button btn_save;
+    RelativeLayout btn_save;
     ProgressDialog progressDialog;
     String city,state,postalCode,address,type="";
 
