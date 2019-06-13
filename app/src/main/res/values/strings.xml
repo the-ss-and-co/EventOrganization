@@ -3,11 +3,7 @@
     <string name="arrowback">arrowback</string>
     <string name="event_house_name_no">Event House Name/No.</string>
     <string name="area_name">Area Name</string>
-    <string name="city">City</string>
     <string name="town">Town</string>
-    <string name="state">State</string>
-    <string name="pin">Pin</string>
-    <string name="landmark">Landmark</string>
     <string name="save">Save</string>
     <string name="extra_details">Extra Details</string>
     <string name="skip">Skip</string>
@@ -88,4 +84,26 @@
     <string name="do_you_have_any_query">Do you have any query</string>
     <string name="send_caps">SEND</string>
     <string name="lorem_ipsum_is_simply_dummy_text_of_the_printing_n_and_typesetting_industry_lorem_ipsum_has_been_the_n_industry_s_standard_dummy_text_ever_since_the_1500s_n_whne_an_unknown_printer_took_a_gallery_of_type_and_n_scrambled_it_to_make_a_type_specimen_book">Lorem Ipsum is simply dummy text of the printing  and typesetting industry. lorem ipsum has been the  industry\'s standard dummy text ever since the 1500s,  whne an unknown printer took a gallery of type and  scrambled it to make a type specimen book.</string>
+    <string name="step_1">Step 1</string>
+    <string name="owner_s_name">Owner\'s Name</string>
+    <string name="your_name">your name</string>
+    <string name="company_name">Company Name</string>
+    <string name="company_address">Company Address</string>
+    <string name="city">City</string>
+    <string name="pin">Pin</string>
+    <string name="state">State</string>
+    <string name="landmark">Landmark</string>
+    <string name="submit">Submit</string>
+    <string name="next">Next</string>
+    <string name="total_employee_in_number">Total Employee(In Number)</string>
+    <string name="year_of_experiance">Year Of Experiance</string>
+    <string name="years_in_number">years(in number)</string>
+    <string name="months_in_number">months(in number)</string>
+    <string name="step_2">Step 2</string>
+    <string name="maximum_no_of_boking_in_a_day">Maximum No. Of Boking In A Day</string>
+    <string name="maximum_bking_in_a_day">maximum bking in a day</string>
+    <string name="equipment_used">Equipment Used</string>
+    <string name="equipment_name">equipment name</string>
+    <string name="price_for_rent">price for rent</string>
+
 </resources>
