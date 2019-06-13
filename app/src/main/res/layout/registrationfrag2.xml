@@ -1,5 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+            <ImageView
+                android:id="@+id/back_arrw"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_arrow_back_black_24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/step_2"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:layout_toEndOf="@+id/back_arrw"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+  <ScrollView
+      android:layout_below="@+id/card_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="25dp">
+        <TextView
+            android:id="@+id/total_employe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_employee_in_number"
+            android:textSize="16sp"
+            android:textColor="#000000"/>
+        <android.support.v7.widget.CardView
+            android:id="@+id/edt_employee"
+            android:layout_below="@+id/total_employe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edit_text_oval"
+                android:hint="total employee"
+                android:paddingStart="10dp"
+                />
+        </android.support.v7.widget.CardView>
+        <TextView
+            android:id="@+id/experience"
+            android:layout_below="@+id/edt_employee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/year_of_experiance"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/edt_experience"
+            android:layout_below="@+id/experience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2.1">
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_oval"
+                    android:hint="@string/years_in_number"
+                    android:paddingStart="10dp"
+                    tools:ignore="RtlSymmetry" />
+            </android.support.v7.widget.CardView>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight=".1">
+            </LinearLayout>
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_oval"
+                    android:hint="@string/months_in_number"
+                    android:paddingStart="7dp"
+                    tools:ignore="RtlSymmetry" />
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/boking"
+            android:layout_below="@id/edt_experience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/maximum_no_of_boking_in_a_day"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            />
+        <android.support.v7.widget.CardView
+            android:id="@+id/edt_boking"
+            android:layout_below="@+id/boking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edit_text_oval"
+                android:hint="@string/maximum_bking_in_a_day"
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry" />
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/equipment"
+            android:layout_below="@+id/edt_boking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/equipment_used"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginTop="20dp"/>
+        <LinearLayout
+            android:layout_below="@+id/equipment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_oval"
+                    android:hint="@string/equipment_name"
+                    android:paddingStart="10dp"/>
+            </android.support.v7.widget.CardView>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight=".1">
+            </LinearLayout>
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="@string/price_for_rent"
+                    android:paddingStart="10dp"
+                    android:background="@drawable/edit_text_oval"
+                    tools:ignore="RtlSymmetry" />
+
+            </android.support.v7.widget.CardView>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+  </ScrollView>
 </RelativeLayout>
