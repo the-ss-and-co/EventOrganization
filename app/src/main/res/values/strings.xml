@@ -105,5 +105,9 @@
     <string name="equipment_used">Equipment Used</string>
     <string name="equipment_name">equipment name</string>
     <string name="price_for_rent">price for rent</string>
+    <string name="add_more">+ Add More</string>
+    <string name="event_you_cover">Event You Cover</string>
+    <string name="event_name">Event Name</string>
+    <string name="add_event">+ Add Event</string>
 
 </resources>
