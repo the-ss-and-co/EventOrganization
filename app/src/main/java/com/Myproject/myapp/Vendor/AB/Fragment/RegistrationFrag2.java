@@ -12,15 +12,19 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.Myproject.myapp.Adapter.AddEquipmentAdapter;
+import com.Myproject.myapp.Adapter.CoverEventAdapter;
 import com.Myproject.myapp.Model.Equipmentmodel;
+import com.Myproject.myapp.Model.EventcoverModel;
 import com.Myproject.myapp.R;
 
 import java.util.ArrayList;
 
 public class RegistrationFrag2 extends Fragment {
-    RecyclerView recycler_equipment;
+    RecyclerView recycler_equipment,cover_event_recycler;
     ArrayList<Equipmentmodel> arrayList;
+    ArrayList<EventcoverModel> arrayList2;
     AddEquipmentAdapter addEquipmentAdapter;
+    CoverEventAdapter coverEventAdapter;
     TextView add_more;
 
     @Nullable
@@ -29,9 +33,19 @@ public class RegistrationFrag2 extends Fragment {
         View view = inflater.inflate(R.layout.registrationfrag2,container,false);
         recycler_equipment = view.findViewById(R.id.recycler_equipment);
         add_more = view.findViewById(R.id.add_more);
+        cover_event_recycler = view.findViewById(R.id.cover_event_recyler);
 
         arrayList = new ArrayList<>();
         arrayList.add(new Equipmentmodel("",""));
+        arrayList2 = new ArrayList<>();
+
+        arrayList2.add(new EventcoverModel("Marriage"));
+        arrayList2.add(new EventcoverModel("Anniversary"));
+        arrayList2.add(new EventcoverModel("Birthday"));
+        arrayList2.add(new EventcoverModel("Funeral"));
+        arrayList2.add(new EventcoverModel("Corporate"));
+        arrayList2.add(new EventcoverModel("Marriage"));
+
 
         add_more.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +57,10 @@ public class RegistrationFrag2 extends Fragment {
         addEquipmentAdapter=new AddEquipmentAdapter(getContext(),arrayList);
         recycler_equipment.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
         recycler_equipment.setAdapter(addEquipmentAdapter);
+
+        coverEventAdapter=new CoverEventAdapter(arrayList2,getContext());
+        cover_event_recycler.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
+        cover_event_recycler.setAdapter(coverEventAdapter);
         return view;
     }
 }
