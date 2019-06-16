@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import com.Myproject.myapp.R;
@@ -25,6 +26,8 @@ public class RegistrationFrag1 extends Fragment {
         Next.setOnClickListener(v -> {
             replace(new RegistrationFrag2());
         });
+        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
         return  view;
 
     }
@@ -36,7 +39,7 @@ public class RegistrationFrag1 extends Fragment {
         if (!fragmentPopped) {
             FragmentManager fm = getFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
-            ft.replace(R.id.registration_from_container, fragment);
+            ft.replace(R.id.registraton_form_contaner, fragment);
             ft.addToBackStack(backStateName);
             ft.commit();
 

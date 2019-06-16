@@ -17,6 +17,6 @@ public class RegistrationFormActivity extends AppCompatActivity{
         setContentView(R.layout.activity_registration_form);
         FragmentManager fm=getSupportFragmentManager();
         FragmentTransaction ft=fm.beginTransaction();
-        ft.replace(R.id.registration_from_container,new RegistrationFrag1()).commit();
+        ft.replace(R.id.registraton_form_contaner,new RegistrationFrag1()).commit();
     }
 }

@@ -1,6 +1,7 @@
 package com.Myproject.myapp.fragments;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -34,6 +35,7 @@ public class LoginFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initviews(view);
+
  btn_next.setOnClickListener(new View.OnClickListener() {
      @Override
      public void onClick(View v) {
@@ -53,7 +55,9 @@ public class LoginFragment extends Fragment {
     private void initviews(View view) {
         btn_next=view.findViewById(R.id.btn_next);
         edt_phone=view.findViewById(R.id.edt_phone);
+
         edt_name=view.findViewById(R.id.edt_name);
+
         edt_phone_main=view.findViewById(R.id.edt_phone_main);
         edt_name_main=view.findViewById(R.id.edt_name_main);
     }

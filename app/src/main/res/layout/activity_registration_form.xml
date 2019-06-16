@@ -9,7 +9,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/registration_from_container">
+        android:id="@+id/registraton_form_contaner">
     </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

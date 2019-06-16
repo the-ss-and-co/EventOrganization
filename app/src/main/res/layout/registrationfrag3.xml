@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        app:cardElevation="3dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+            <ImageView
+                android:id="@+id/back_arrw"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_arrow_back_black_24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step 3"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:layout_toEndOf="@+id/back_arrw"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <LinearLayout
+        android:layout_below="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pan Card"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand"
+                android:textSize="17dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  *"
+                android:textSize="17dp"
+                android:gravity="top"
+                android:layout_gravity="top"
+                android:textColor="@color/red"/>
+        </LinearLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="13dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:background="@drawable/edit_text_oval">
+    <Button
+        android:id="@+id/choose_pan"
+        android:layout_width="100dp"
+        android:layout_height="23dp"
+        android:text="Choose file"
+        android:textSize="15dp"
+        android:background="@drawable/choosefile"
+        android:textAllCaps="false"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/choose_pan"
+        android:text="No file chosen"
+        android:layout_centerVertical="true"
+        android:textSize="15dp"
+        android:layout_marginLeft="6dp"
+        android:textColor="@color/black"/>
+</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GST No."
+            android:layout_marginTop="18dp"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:textStyle="bold" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="GST no."
+
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:singleLine="true"
+            android:textSize="16dp"
+            android:focusableInTouchMode="true"
+            android:defaultFocusHighlightEnabled="false"
+            android:layout_marginTop="5dp"
+            android:paddingHorizontal="15dp"
+            android:textColorHint="@color/lightblank"
+            android:background="@drawable/edittextbackground"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="18dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trade Licence"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand"
+                android:textSize="17dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  *"
+                android:textSize="17dp"
+                android:gravity="top"
+                android:layout_gravity="top"
+                android:textColor="@color/red"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="13dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:background="@drawable/edit_text_oval">
+            <Button
+                android:id="@+id/choose_trade"
+                android:layout_width="100dp"
+                android:layout_height="23dp"
+                android:text="Choose file"
+                android:textSize="15dp"
+                android:background="@drawable/choosefile"
+                android:textAllCaps="false"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/choose_trade"
+                android:text="No file chosen"
+                android:layout_centerVertical="true"
+                android:textSize="15dp"
+                android:layout_marginLeft="6dp"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/btn"
+            android:layout_below="@+id/edt_landmark"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:text="@string/next"
+            android:fontFamily="@font/quicksand_bold"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:background="@drawable/rcr"/>
+    </LinearLayout>
+</RelativeLayout>

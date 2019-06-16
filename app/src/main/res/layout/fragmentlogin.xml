@@ -27,6 +27,9 @@
             android:id="@+id/edt_name_main"
             android:padding="5px"
             android:backgroundTint="#000"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:defaultFocusHighlightEnabled="false"
             android:layout_marginLeft="35dp">
 
             <EditText

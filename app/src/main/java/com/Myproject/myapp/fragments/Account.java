@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.Myproject.myapp.Activity.AccountActivity;
 import com.Myproject.myapp.R;
+import com.Myproject.myapp.Vendor.AB.Activity.RegistrationFormActivity;
 
 public class Account extends Fragment {
     TextView bills,profile,be_our_partner,help,privacy_policy,refercode;
@@ -48,6 +49,10 @@ public class Account extends Fragment {
         refercode.setOnClickListener(v -> {
             Intent intent=new Intent(getContext(), AccountActivity.class);
             intent.putExtra("type","code");
+            startActivity(intent);
+        });
+        view.findViewById(R.id.partner).setOnClickListener(v -> {
+            Intent intent=new Intent(getContext(), RegistrationFormActivity.class);
             startActivity(intent);
         });
         return  view;

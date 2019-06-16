@@ -8,11 +8,12 @@
     <android.support.v7.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:elevation="5dp">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginBottom="1dp">
+           >
             <ImageView
                 android:id="@+id/back_arrw"
                 android:layout_width="30dp"
@@ -35,11 +36,12 @@
     </android.support.v7.widget.CardView>
     <ScrollView
         android:layout_below="@+id/card_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginTop="25dp">
@@ -60,11 +62,13 @@
             android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/edit_text_oval"
             android:hint="@string/your_name"
-            android:paddingStart="5dp"
-            tools:ignore="RtlSymmetry" />
+            android:paddingStart="10dp"
+            android:focusedByDefault="false"
+            android:defaultFocusHighlightEnabled="false"
+            android:paddingVertical="7dp" />
         </android.support.v7.widget.CardView>
         <TextView
             android:id="@+id/company"
@@ -85,10 +89,11 @@
             app:cardCornerRadius="5dp">
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
+
             android:hint="@string/company_name"
-            android:paddingStart="5dp"
-            tools:ignore="RtlSymmetry"
+            android:paddingStart="10dp"
+            android:paddingVertical="7dp"            tools:ignore="RtlSymmetry"
             android:background="@drawable/edit_text_oval"/>
         </android.support.v7.widget.CardView>
         <TextView
@@ -110,11 +115,11 @@
             android:layout_marginTop="5dp">
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_oval"
                 android:hint="@string/company_address"
-                android:paddingStart="5dp"
-                tools:ignore="RtlSymmetry" />
+                android:paddingStart="10dp"
+                android:paddingVertical="7dp"                tools:ignore="RtlSymmetry" />
 
         </android.support.v7.widget.CardView>
         <TextView
@@ -135,11 +140,11 @@
             android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/edit_text_oval"
             android:hint="@string/city"
-            android:paddingStart="5dp"
-            tools:ignore="RtlSymmetry" />
+            android:paddingStart="10dp"
+            android:paddingVertical="7dp"            tools:ignore="RtlSymmetry" />
         </android.support.v7.widget.CardView>
         <TextView
             android:id="@+id/pin"
@@ -159,10 +164,11 @@
             android:layout_height="wrap_content">
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_oval"
                 android:hint="@string/pin"
-                android:paddingStart="5dp"
+                android:paddingStart="10dp"
+                android:paddingVertical="7dp"
                 tools:ignore="RtlSymmetry" />
 
         </android.support.v7.widget.CardView>
@@ -184,11 +190,11 @@
             android:layout_height="wrap_content">
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_oval"
                 android:hint="@string/state"
-                android:paddingStart="5dp"
-                />
+                android:paddingStart="10dp"
+                android:paddingVertical="7dp"                />
         </android.support.v7.widget.CardView>
         <TextView
             android:id="@+id/landmark"
@@ -209,23 +215,35 @@
             android:layout_height="wrap_content">
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:paddingStart="5dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingVertical="7dp"
                 android:background="@drawable/edit_text_oval"
                 android:hint="@string/landmark"
                 tools:ignore="RtlSymmetry" />
+
         </android.support.v7.widget.CardView>
         <Button
             android:id="@+id/next"
             android:layout_below="@+id/edt_landmark"
             android:layout_width="100dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:text="@string/next"
+            android:fontFamily="@font/quicksand_bold"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="20dp"
             android:textColor="#ffffff"
-            android:background="@drawable/edittext_back_round"/>
+            android:background="@drawable/rcr"/>
+        <LinearLayout
+            android:layout_below="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical">
+        </LinearLayout>
     </RelativeLayout>
     </ScrollView>
 
