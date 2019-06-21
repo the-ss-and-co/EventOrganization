@@ -52,6 +52,18 @@ public class RegistrationFrag2 extends Fragment {
 
         });
         add_more.setOnClickListener(v -> replace(new RegistrationFrag3()));
+        add_more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+            }
+        });
+        view.findViewById(R.id.next).setOnClickListener(v -> {
+            replace(new RegistrationFrag3());
+
+        });
+
 
         addEquipmentAdapter = new AddEquipmentAdapter(getContext(), arrayList);
         recycler_equipment.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));

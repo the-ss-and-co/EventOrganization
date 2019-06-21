@@ -33,7 +33,6 @@ public class RegistrationFrag1 extends Fragment {
     }
     private void replace(Fragment fragment) {
         String backStateName = fragment.getClass().getName();
-        assert getFragmentManager() != null;
         boolean fragmentPopped = getFragmentManager().popBackStackImmediate(backStateName, 0);
 
         if (!fragmentPopped) {

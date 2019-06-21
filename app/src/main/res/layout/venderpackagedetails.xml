@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+       app:cardElevation="4dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/back_arrw"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Package"
+                android:layout_toRightOf="@+id/back_arrw"
+                android:layout_centerVertical="true"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/quicksand_bold"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+<android.support.v4.widget.NestedScrollView
+    android:layout_above="@+id/rrr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/card1"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="15dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginLeft="12dp"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ceremonies"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/quicksand"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mandotary"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:scaleX="0.90"
+                android:scaleY="0.90"
+                android:textSize="18dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:background="@drawable/redborder"
+                android:padding="8dp"
+                android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+Add item"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        android:textSize="17dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:layout_marginTop="7dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Album name/type like - Haldi,Pre-Wedding,Mehandi etc"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:fontFamily="@font/quicksand"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ceremony_list"
+            android:layout_marginTop="7dp"
+            android:nestedScrollingEnabled="false">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Albums"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/quicksand"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mandotary"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:scaleX="0.90"
+            android:scaleY="0.90"
+            android:textSize="18dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:background="@drawable/redborder"
+            android:padding="8dp"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+Add item"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        android:textSize="17dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:layout_marginTop="7dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Album name/type like - Matted, Flush Moun Canvera etc."
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:fontFamily="@font/quicksand"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/album_list"
+            android:layout_marginTop="7dp"
+            android:nestedScrollingEnabled="false">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Others"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/quicksand"/>
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+Add item"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        android:textSize="17dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:layout_marginTop="7dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Album name/type like - Matted, Flush Moun Canvera etc."
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:fontFamily="@font/quicksand"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/others_list"
+            android:layout_marginTop="7dp"
+            android:nestedScrollingEnabled="false">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="40dp">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Any discounts for this package (in %)?"
+    android:textColor="@color/black"
+    android:textSize="13dp"
+    android:fontFamily="@font/quicksand"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_oval"
+            android:hint="e.g. 20"
+            android:layout_marginTop="4dp"
+android:padding="7dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="( you can attract more customers than the others by giving them discounts )"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:fontFamily="@font/quicksand"/>
+    </LinearLayout>
+</LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
+    <RelativeLayout
+        android:id="@+id/rrr"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Package of"
+                    android:id="@+id/tt"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textColor="@color/black"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16sp"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tt"
+                    android:layout_centerInParent="true">
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/rupeeblack"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20000"
+                        android:layout_gravity="center"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+
+            </RelativeLayout>
+            <Button
+                android:id="@+id/set_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/red"
+                android:text="Create"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:fontFamily="@font/quicksand_bold" />
+            <Button
+                android:id="@+id/btn_payment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/green"
+                android:text="Pay Now"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:fontFamily="@font/quicksand"
+                />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
