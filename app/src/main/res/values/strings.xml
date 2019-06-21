@@ -112,5 +112,11 @@
     <string name="write_unlimited_or_distance_in_km">write unlimited or distance(in km)</string>
     <string name="maximum_distance_you_cover_without_extra_charge">Maximum Distance You Cover Without Extra Charge</string>
     <string name="you_can_write_unlimited_if_you_dont_have_any_n_boundationof_distance_or_you_can_put_distance_in_km">(you can write unlimited if you dont have any   boundationof distance or you can put distance in km)</string>
+    <string name="create_packages">Create Packages</string>
+    <string name="starting_price">Starting Price</string>
+    <string name="_16000">16000</string>
+    <string name="_20000">20000</string>
+    <string name="_10">10%</string>
+    <string name="off">Off</string>
 
 </resources>
